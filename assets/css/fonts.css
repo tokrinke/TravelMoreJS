@@ -1,0 +1,12 @@
+@font-face {
+    font-family: FigtreeLight;
+    src: url(/assets/fonts/Figtree-Light.ttf);
+}
+@font-face {
+    font-family: FigtreeRegular;
+    src: url(/assets/fonts/Figtree-Regular.ttf);
+}
+@font-face {
+    font-family: FigtreeMedium;
+    src: url(/assets/fonts/Figtree-Medium.ttf);
+}

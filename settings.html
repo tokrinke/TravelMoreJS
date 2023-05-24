@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMore • Account settings</title>
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/settings.css">
+</head>
+<body>
+    <header class="settingsHeader flexCenter">
+        <div class="settingsHeaderLeft flexCenter">
+            TravelMore
+        </div>
+        <div class="settingsHeaderRight flexCenter">
+            <a href="./homepage.html" class="cursorHover">Home</a>
+            <a href="./listproperty.html" class="cursorHover">List your property</a>
+            <a href="./aboutus.html" class="cursorHover">About us</a>
+            <div class="settingsUserIcon appear">
+                <i class="fa-solid fa-circle-user fa-2xl cursorHover" style="color: #FFF;"></i>
+            </div>
+        </div>
+    </header>
+   <section class="settingsSection flexCenter appear">
+        <div class="userProfileImage">
+            <div class="usersFullname flexCenter">
+                Hello, "userFullName"
+            </div>
+            <div class="profilePictureSection flexCenter">
+                <div class="displaysProfilePic flexCenter cursorHover">
+                    <i class="fa-regular fa-images fa-2xl" style="color: #196a43;"></i>
+                </div>
+                <button class="uploadProfilePicBtn defaultBtn cursorHover">Upload new photo</button>
+                <div class="profilePicInfoBox flexCenter">
+                    Upload your desired avatar. Larger image will be resized automatically.
+                    <br>
+                    <p>Note: "This picture will be displayed to other users under the listings you put up."</p>
+                </div>
+            </div>
+            <div class="belowProfilePicSection flexCenter">
+                <div class="showRegDate flexCenter">
+                    Member since: "userRegDate"
+                </div>
+            </div>
+        </div>
+        <div class="userDetails">
+            <div class="detailsHeader">
+                Edit profile
+            </div>
+            <div class="detailsSplitter">
+                <button class="infoBtn cursorHover">Your info</button>
+                <button class="listingsBtn cursorHover">Your listings</button>
+            </div>
+            <div class="detailsForm">
+                <div class="yourInfo flexCenter appear">
+                    <div class="yourInfoInputs">
+                        <div>
+                            <label for="name">Your name:</label>
+                            <input id="name" class="detailsFormInputs cursorHover" type="text" placeholder="">
+                        </div>
+                        <div>
+                            <label for="surname">Your surname:</label>
+                            <input id="surname" class="detailsFormInputs cursorHover" type="text" placeholder="">
+                        </div>
+                        <div>
+                            <label for="password">Your password</label>
+                            <input id="password" class="detailsFormInputs cursorHover" type="password" placeholder="********">
+                        </div>
+                        <div>
+                            <label for="repearpassword">Repeat your password:</label>
+                            <input id="repeatpassword" class="detailsFormInputs cursorHover" type="password" placeholder="********">
+                        </div>
+                        <div>
+                            <label for="email">Your email:</label>
+                            <input id="email" class="detailsFormInputs cursorHover" type="email" placeholder="example@example.com">
+                        </div>
+                        <div>
+                            <label for="number">Your number:</label>
+                            <input id="number" class="detailsFormInputs cursorHover" type="text" placeholder="+0 00 00 00">
+                        </div>
+                    </div>
+                </div>
+                <div class="yourListings appear">
+                    <div class="listingTemplate cursorHover">
+                        <div class="listingDetails">
+
+                        </div>
+                        <div class="removeListing flexCenter cursorHover">
+                            <button class="removeListingBtn cursorHover"><i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;"></i></button>
+                        </div>
+                    </div>
+                    <div class="listingTemplate cursorHover">
+                        <div class="listingDetails">
+
+                        </div>
+                        <div class="removeListing flexCenter cursorHover">
+                            <button class="removeListingBtn cursorHover"><i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;"></i></button>
+                        </div>
+                    </div>
+                    <div class="listingTemplate cursorHover">
+                        <div class="listingDetails">
+
+                        </div>
+                        <div class="removeListing flexCenter cursorHover">
+                            <button class="removeListingBtn cursorHover"><i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;"></i></button>
+                        </div>
+                    </div>
+                    <div class="listingTemplate cursorHover">
+                        <div class="listingDetails">
+
+                        </div>
+                        <div class="removeListing flexCenter cursorHover">
+                            <button class="removeListingBtn cursorHover"><i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="formFooter flexCenter appear">
+                    <button class="cursorHover appear">Save changes</button>
+                </div>
+            </div>
+        </div>
+   </section>
+    <footer class="settingsFooter">
+        <p class="footerP appear">Follow us!</p>
+        <div class="socials appear">
+            <a id="fbBtn" href="https://facebook.com"><i class="fa-brands fa-facebook-f fa-xl cursorHover" style="color: #ffffff;"></i></a>
+            <a id="twBtn" href="https://twitter.com"><i class="fa-brands fa-twitter fa-xl cursorHover" style="color: #ffffff;"></i></a>
+            <a id="igBtn" href="https://instagram.com"><i class="fa-brands fa-instagram fa-xl cursorHover" style="color: #ffffff;"></i></a>
+        </div>
+    </footer>
+
+  
+    <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/firebase.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/settings.js"></script>
+    <script src="./assets/js/chat.js"></script>
+</body>
+</html>

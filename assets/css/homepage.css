@@ -1,0 +1,281 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.defaultBtn{
+    font-family: FigtreeRegular;
+    font-size: 1em;
+    border: none;
+    background-color: #196A43;
+    color: #FFF;
+    height: 2.2em;
+    width: 10em;
+    border-radius: 7px;
+    transition: 0.5s;
+    animation: Appear 1.3s;
+}
+.defaultBtn:hover{
+    background-color: #004021;
+    color: #fff;
+    transition: 0.5s;
+}
+.backBtn:hover{
+    color: #004021;
+    transition: 1s;
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cursorHover{
+    cursor: pointer;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    gap: 5vh;
+    z-index: 1;
+    animation: Appear 0.7s;
+}
+.hpBg{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 45vh;
+    width: 100vw;
+}
+.headerPic{
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.6);
+    object-fit: cover;
+}
+.hpHeader{
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45vh;
+    width: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.headerTop{
+    width: 100%;
+    height: 8vh;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    
+}
+.hpHeaderLeft{
+    color: #FFF;
+    font-family: FigtreeMedium;
+    font-size: 3.5vh;
+    width: 20%;
+    height: 100%;
+}
+.hpHeaderRight{
+    width: 40%;
+    height: 100%;
+    flex-direction: row;
+    gap: 2vh;
+    color: #FFF;
+    font-family: FigtreeRegular;
+}
+.hpHeaderRight a{
+    text-decoration: none;
+    color: #fff;
+}
+.headerBottom{
+    height: 70%;
+    width: 100%;
+    flex-direction: column;
+    gap: 3vh;
+}
+.aboveSearchContent{
+    color: #FFF;
+    font-family: FigtreeMedium;
+    font-size: 3vh;
+}
+
+.mainSection{
+    min-height: 85vh;
+    max-width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    filter: brightness(0.95);
+    padding-top: 1vh;
+}
+.listingBox{
+    animation: Appear 1.3s;
+    transition: 0.7s;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    min-height: 35vh;
+    width: 70vw;
+    background-color: #131313;
+    border-radius: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.listingBox:hover{
+    transition: 1s;
+    scale: 1.01;
+}
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vh;
+    animation: Appear 1.3s;
+}
+.inputSearch{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    padding-left: 0.8vw;
+    height: 5vh;
+    width: 30vw;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    font-family: FigtreeMedium;
+    color: #010101;
+    font-size: 1.7vh;
+    transition: 1s;
+}
+.inputSearch:focus{
+    outline: none;
+    font-family: FigtreeRegular;
+    color: #010101;
+    caret-color: whitesmoke;
+    font-size: 1.75vh;
+}
+.inputSearch::placeholder{
+    color: #010101;    
+    font-family: FigtreeLight;
+}
+.inputSearch:focus::placeholder{
+    color: transparent;
+}
+.filters{
+    height: 8vh;
+    width: 35vw;
+    background-color: rgba(19, 19, 19, 0.9);
+    flex-direction: row;
+    justify-content: space-around;
+}
+.filterBtns{
+    font-family: FigtreeMedium;
+    font-size: 2vh;
+    color: #196A43;
+    transition: 0.5s;
+}
+.filterBtns:hover{
+    color: #FFF;
+    transition: 0.7s;
+}
+#listYourProperty{
+    text-decoration: none;
+    font-family: FigtreeRegular;
+    color: #fff;
+    animation: Appear 1.3s;
+}
+#settingsBtn{
+    animation: Appear 1.3s;
+    font-family: FigtreeRegular;
+    color: #FFF;
+    font-size: 1em;
+    text-decoration: none;
+}
+.chat{
+    height: 7vh;
+    width: 3.5vw;
+    background-color: #131313;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    position: fixed;
+    z-index: 1;
+    right: 2vh;
+    bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s;
+    animation: Appear 1.3s;
+}
+.chat:hover{
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    scale: 1.1;
+}
+.chatInfo{
+    display: none;
+    position: fixed;
+    right: 7vh;
+    bottom: 6vh;
+    color: #196A43;
+    font-family: FigtreeRegular;
+    height: 1vh;
+    width: 15vw;
+    transition: 1s;
+    animation: Appear 1.3s;
+}
+.bigInput{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px white solid;
+    height: 2.5vh;
+    width: 27vw;
+    background-color: transparent;
+    font-family: FigtreeMedium;
+    color: #ffffff;
+    padding-left: 1vh;
+}
+.bigInput::placeholder{
+    font-family: FigtreeMedium;
+    color: #ffffff;
+}
+.bigInput:focus{
+    outline: none;
+    color: #fff;
+    font-family: FigtreeRegular;
+    caret-color: whitesmoke;
+}
+.bigInput:focus::placeholder{
+    color: transparent;
+}
+.hpFooter{
+    height: 25vh;
+    gap: 0.5vw;
+    max-width: 100vw;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#toContactUsBtn{
+    text-decoration: none;
+    color: #fff;
+    font-family: FigtreeRegular;
+    animation: Appear 1.3s;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: FigtreeRegular;
+    animation: Appear 1.3s;
+    gap: 0.5vh;
+}

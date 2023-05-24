@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMore</title>
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/landing.css">
+</head>
+<body>
+    <div class="landingPageBg">
+        <img class="bgPic" src="./assets/images/landingPic.jpg" alt="landingBg.jpg">
+    </div>
+    <section class="welcomeSection">
+        <div class="secLeftSide" >
+            <div class="welcomeContainer">
+                <div class="welcomeBox">
+                    <div class="subBox">
+                        <h1>TravelMore</h1>
+                        <p class="landingText">Explore Georgia with TravelMore! Browse hotels in Georgia and plan your dream holiday with us!</p>
+                        <br> <br> <br> <br>
+                        <div class="welcomeBoxBtns">
+                            <a id="browseBtn" href="./homepage.html"><button class="defaultBtn cursorHover">Browse Hotels</button></a>
+                            <a id="aboutUsBtn" href="./aboutus.html"><button class="defaultBtn cursorHover">About Us</button></a>
+                        </div>
+                        <div class="socials">
+                            <a id="fbBtn" href="https://facebook.com"><i class="fa-brands fa-facebook-f fa-xl cursorHover" style="color: #ffffff;"></i></a>
+                            <a id="twBtn" href="https://twitter.com"><i class="fa-brands fa-twitter fa-xl cursorHover" style="color: #ffffff;"></i></a>
+                            <a id="igBtn" href="https://instagram.com"><i class="fa-brands fa-instagram fa-xl cursorHover" style="color: #ffffff;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secRightSide">
+            <div class="userLogIn cursorHover">
+                <i class="fa-solid fa-circle-user fa-2xl" style="color: #ffffff;"></i>
+                <div class="userAccInfoBox">Already have an account? Log in</div>
+            </div>
+            <div class="logInContainer">
+                <div class="logInBar">
+                    <div class="insideLogInBar">
+                        <div class="logInAuthMenu">
+                            <div class="logInTitle">Log In</div>
+                            <input type="email" class="inputEmail bigInput" placeholder="Your Email:" >
+                          <input type="password" class="inputPassword bigInput" placeholder="Your password:" >
+                            <div class="logInAuthMenuBtns">
+                                <button class="defaultBtn cursorHover logInAuthMenuBtnsInner" id="finishLogIn">Log In</button>
+                                <button class="defaultBtn cursorHover logInAuthMenuBtnsInner" id="signUpBtn">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="authMenu">
+                    <div class="authMenuCtrl">
+                        <div class="insideAuthMenu">
+                            <div class="authTitle">Create your account</div>
+                            <div class="nameSurname">
+                                <input type="text" class="inputName smallInput" placeholder="Your Name:" >
+                                <input type="text" class="inputSurname smallInput" placeholder="Your Surname" >
+                            </div>
+                            <input type="email" class="inputRegEmail bigInput" placeholder="Your Email:" >
+                            <input type="password" class="inputRegPassword bigInput" placeholder="Your password:" >
+                            <input type="password" class="repeatRegPassword bigInput" placeholder="Repeat your password:" >
+                            <button class="defaultBtn cursorHover" id="finishSignUp" >Create Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/firebase.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/landing.js"></script>
+</body>
+</html>

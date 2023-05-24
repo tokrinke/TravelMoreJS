@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMore • List your property</title>
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/listproperty.css">
+</head>
+<body>
+    <header class="listpropertyHeader flexCenter">
+        <div class="listpropertyHeaderLeft flexCenter">
+            TravelMore
+        </div>
+        <div class="listpropertyHeaderRight flexCenter">
+            <a href="./homepage.html" class="cursorHover">Home</a>
+            <a href="./aboutus.html" class="cursorHover">About us</a>
+            <a href="./settings.html" class="cursorHover">Settings</a>
+            <div class="listpropertyUserIcon appear">
+                <i class="fa-solid fa-circle-user fa-2xl cursorHover" style="color: #FFF;"></i>
+            </div>
+        </div>
+    </header>
+    <section class="listingsMainSection flexCenter">
+        <div class="mainWrapper">
+            <div class="wrapperHeader flexCenter">
+                <h1>List your hotel</h1>
+            </div>
+            <div class="splitter ">
+                <h2>Listing details:</h2>
+            </div>
+            <br>
+            <br>
+            <div class="wrapperContent">
+               <div class="wrapperTop">
+                    <div class="basicHotelInfo">
+                        <p>Hotel name: </p>
+                        <input class="hotelName hotelDetailBox cursorHover" type="text" placeholder="Hotel name:">
+
+                        </input>
+                        <p>Our address:</p>
+                        <input class="hotelAddress hotelDetailBox cursorHover" type="text" placeholder="Address:">
+
+                        </input>
+                        <p>Starting from:</p>
+                        <input class="hotelPrice hotelDetailBox cursorHover" type="text" placeholder="Enter starting price:"> 
+                        </input>
+                    </div>
+                    <div class="uploadHotelImage">
+                        <h4>Upload some photos of your hotel:</h4>
+                        <div class="choosePhotos flexCenter cursorHover">
+                            <i class="fa-regular fa-images fa-2xl" style="color: #196a43;"></i>
+                        </div>
+                    </div>
+               </div>
+                <div class="chooseLoc">
+                    <div>
+                        <h3>Where is your hotel located?</h3>
+                        <p>City: </p>
+                        <input class="enterLoc cursorHover" type="text" placeholder="Enter city: ">
+                    </div>
+                    <div class="locations">
+                        <h4>Popular locations:</h4>
+                        <div class="presetCities">
+                            <div class="Tbilisi cityBox flexCenter">
+                                Tbilisi
+                            </div>
+                            <div class="Batumi cityBox flexCenter">
+                                Batumi
+                            </div>
+                            <div class="Kobuleti cityBox flexCenter">
+                                Kobuleti
+                            </div>
+                            <div class="Kutaisi cityBox flexCenter">
+                                Kutaisi
+                            </div>
+                            <div class="Mtskheta cityBox flexCenter">
+                                Mtskheta
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="setContactInfo">
+                        <div class="contactBottom">
+                            <h3>Add contact details</h3>
+                            <div class="contactBottomInfo">
+                                <div class="contactName">
+                                    <p>Hotelier: </p>
+                                    <input class="enterContactName contactBox cursorHover" type="text" placeholder="Name and surname: ">
+                                </div>
+                                <div class="contactEmail">
+                                    <p>Hotel email: </p>
+                                    <input class="enterContactEmail contactBox cursorHover" type="text" placeholder="Contact email: ">
+                                </div>
+                                <div class="contactNumber">
+                                    <p>Hotel number: </p>
+                                    <input class="enterContactNumber contactBox cursorHover" type="text" placeholder="Contact number: ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="wrapperFoot flexCenter">
+                    <button class="saveBtn defaultBtn cursorHover">Save</button>
+                </div>
+            </div>
+    </section>
+    <footer class="listpropertyFooter">
+        <p class="footerP appear">Follow us!</p>
+        <div class="socials appear">
+            <a id="fbBtn" href="https://facebook.com"><i class="fa-brands fa-facebook-f fa-xl cursorHover" style="color: #ffffff;"></i></a>
+            <a id="twBtn" href="https://twitter.com"><i class="fa-brands fa-twitter fa-xl cursorHover" style="color: #ffffff;"></i></a>
+            <a id="igBtn" href="https://instagram.com"><i class="fa-brands fa-instagram fa-xl cursorHover" style="color: #ffffff;"></i></a>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/firebase.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/listproperty.js"></script>
+</body>
+</html>
