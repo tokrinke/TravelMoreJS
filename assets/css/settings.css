@@ -75,12 +75,15 @@ body{
     flex-direction: column;
 }
 .usersFullname{
+    background-color: #004021;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 15%;
     width: 100%;
-    color: #004021;
+    color: #FFF;
     font-family: FigtreeMedium;
     font-weight: 600;
     font-size: 2.5vh;
+    margin-bottom: 2vh;
 }
 .profilePictureSection{
     height: 65%;
@@ -137,8 +140,10 @@ body{
 }
 .detailsHeader{
     height: 10%;
-    width: 100%;
-    color: #131313;
+    max-width: 100%;
+    background-color: #004021;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: #FFF;
     font-family: FigtreeMedium;
     font-weight: 600;
     font-size: 3vh;
@@ -147,10 +152,12 @@ body{
     justify-content: flex-start;
     padding-left: 1vw;
     padding-top: 1vh;
+    margin-bottom: 1vh;
 }
 .detailsSplitter{
+    
     height: 5%;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     padding-left: 1vw;

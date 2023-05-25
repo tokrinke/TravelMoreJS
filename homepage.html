@@ -11,48 +11,57 @@
 </head>
 <body>
     <header class="hpHeader flexCenter">
-        <div class="hpBg">
-            <img class="headerPic" src="./assets/images/pexels-grafixartphoto-samir-belhamra-4254614.jpg" alt="headerBgImg">
+        <div class="hpHeaderLeft flexCenter">
+            TravelMore
         </div>
-        <div class="headerTop flexCenter">
-                <div class="hpHeaderLeft flexCenter">
-                    TravelMore
+        <div class="hpHeaderRight flexCenter">
+            <a href="./listproperty.html" class="cursorHover">List your property</a>
+            <a href="./aboutus.html" class="cursorHover">About us</a>
+            <div class="flexCenter uimDiv">
+                <div class="hpUserIcon appear">
+                    <i class="fa-solid fa-circle-user fa-2xl cursorHover" id="userIcon" style="color: #FFF;"></i>
                 </div>
-                <div class="hpHeaderRight flexCenter">
-                    <a href="./listproperty.html" class="cursorHover">List your property</a>
-                    <a href="./aboutus.html" class="cursorHover">About us</a>
-                    <a href="./settings.html" class="cursorHover">Settings</a>
-                    <div class="hpUserIcon appear">
-                        <i class="fa-solid fa-circle-user fa-2xl cursorHover" style="color: #FFF;"></i>
+                <div class="userIconMenu appear flexCenter">
+                    <div class="stgdiv flexCenter cursorHover">
+                        <a href="./settings.html" class="cursorHover"><button class="toSettings flexCenter">Settings</button></a>
+                    </div>
+                    <div class="lodiv flexCenter cursorHover">
+                        <p><button class="logOutBtn cursorHover" onclick="logOut()">Log out</button></p>
                     </div>
                 </div>
-        </div>
-        <div class="headerBottom flexCenter">
-                <div class="aboveSearchContent">
-                    Search for hotels in Georgia
-                </div>
-                <div class="searchBar cursorHover">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
-                    <input class="inputSearch" type="text" placeholder="Enter hotel name ">
-                </div>
+            </div>
         </div>
     </header>
+    <div class="hpSplitter flexCenter">
+        <div class="imgSlider">
+            <div class="hpSearchBgPic">
+                <img class="bgPic bgPic1" src="./assets/images/pexels-grafixartphoto-samir-belhamra-4254614.jpg" alt="hpBg">
+            </div>
+            <!-- <div class="hpSearchBgPic hpSearchBgPic2" style="animation: pictureSlideIn 0.4s;">
+                <img class="bgPic bgPic2" src="./assets/images/svn.jpg" alt="hpBg2">
+            </div>
+            <div class="hpSearchBgPic hpSearchBgPic3" style="animation: pictureSlideIn 0.4s;">
+                <img class="bgPic bgPic3" src="./assets/images/mountainHouse.jpg" alt="hpBg3">
+            </div>
+            <div class="hpSearchBgPic hpSearchBgPic4" style="animation: pictureSlideIn 0.4s;">
+                <img class="bgPic bgPic4" src="./assets/images/tbilisiM.jpg" alt="hpBg4">
+            </div>
+            <div class="hpSearchBgPic hpSearchBgPic5" style="animation: pictureSlideIn 0.4s;">
+                <img class="bgPic bgPic5" src="./assets/images/sofeli.jpg" alt="hpBg5">
+            </div> -->
+        </div>
+        <div class="searchDiv flexCenter">
+            <div class="aboveSearchContent">
+                Search for hotels in Georgia
+            </div>
+            <div class="searchBar cursorHover">
+                <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+                <input class="inputSearch" type="text" placeholder="Enter hotel name ">
+            </div>
+        </div>
+    </div>
     <section class="mainSection">
-        <div class="listingOne listingBox">
-
-        </div>
-        <div class="listingTwo listingBox cursorHover">
-    
-        </div>
-        <div class="listingThree listingBox cursorHover">
-    
-        </div>
-        <div class="listingFour listingBox cursorHover">
-    
-        </div>
-        <div class="listingFive listingBox cursorHover">
-            
-        </div>
+        
     </section>
     <footer class="hpFooter">
         <div class="newsletter">

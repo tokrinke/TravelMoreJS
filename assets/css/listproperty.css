@@ -69,12 +69,15 @@ body{
 .wrapperHeader{
     height: 8%;
     width: 100%;
+    background-color: #004021;
+    box-shadow: rgba(50, 50, 93, 0.4) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-bottom: 2vh;
 }
 h1{
     font-family: FigtreeMedium;
     font-size: 4.5vh;
     font-weight: 600;
-    color: #196A43;
+    color: #FFF;
 }
 h2{
     font-family: FigtreeMedium;

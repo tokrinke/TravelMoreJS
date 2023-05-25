@@ -41,35 +41,13 @@ body{
     z-index: 1;
     animation: Appear 0.7s;
 }
-.hpBg{
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    height: 45vh;
-    width: 100vw;
-}
-.headerPic{
-    height: 100%;
-    width: 100%;
-    filter: brightness(0.6);
-    object-fit: cover;
-}
 .hpHeader{
     justify-content: space-between;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 45vh;
-    width: 100vw;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.headerTop{
-    width: 100%;
-    height: 8vh;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: transparent;
-    
+    height: 8vh;
+    max-width: 100vw;
+    background-color: #131313;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .hpHeaderLeft{
     color: #FFF;
@@ -90,17 +68,116 @@ body{
     text-decoration: none;
     color: #fff;
 }
-.headerBottom{
-    height: 70%;
-    width: 100%;
+.uimDiv{
     flex-direction: column;
-    gap: 3vh;
+    padding-top: 8vh;
+}
+.userIconMenu{
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    max-height: 14vh;
+    width: 5vw;
+    background-color: #131313;
+    border-radius: 2px;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.toSettings{
+    color: #FFF;
+    padding-top: 1vh;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.stgdiv{
+    width: 100%;
+    transition: 0.6s;
+}
+.stgdiv:hover{
+    transition: 0.8s;
+    background-color: #191919;
+    cursor: pointer;
+}
+.toSettings:hover{
+    cursor: pointer;
+}
+.logOutBtn{
+    color: #FFF; 
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+}
+.lodiv{
+    width: 100%;
+    min-height: 50%;
+    transition: 0.6s;
+}
+.lodiv:hover{
+    transition: 0.8s;
+    background-color: #191919;
+    cursor: pointer;
+}
+.logOutBtn:hover{
+    cursor: pointer;
+}
+.hpUserIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+}
+#userIcon{
+    margin-bottom: 2vh;
+    width: 50%;
+}
+.hpSplitter{
+    min-height: 40vh;
+    width: 100vw;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 18px 50px -10px;
+}
+.imgSlider{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.hpSearchBgPic{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.bgPic{
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    
+    filter: brightness(0.7);
 }
 .aboveSearchContent{
     color: #FFF;
     font-family: FigtreeMedium;
     font-size: 3vh;
 }
+.searchDiv{
+    flex-direction: column;
+    gap: 2vh;
+}
+
+
+
 
 .mainSection{
     min-height: 85vh;
@@ -114,22 +191,7 @@ body{
     filter: brightness(0.95);
     padding-top: 1vh;
 }
-.listingBox{
-    animation: Appear 1.3s;
-    transition: 0.7s;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    margin-left: 1vw;
-    min-height: 35vh;
-    width: 70vw;
-    background-color: #131313;
-    border-radius: 1px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-.listingBox:hover{
-    transition: 1s;
-    scale: 1.01;
-}
+
 .searchBar{
     display: flex;
     justify-content: center;
@@ -166,23 +228,6 @@ body{
 }
 .inputSearch:focus::placeholder{
     color: transparent;
-}
-.filters{
-    height: 8vh;
-    width: 35vw;
-    background-color: rgba(19, 19, 19, 0.9);
-    flex-direction: row;
-    justify-content: space-around;
-}
-.filterBtns{
-    font-family: FigtreeMedium;
-    font-size: 2vh;
-    color: #196A43;
-    transition: 0.5s;
-}
-.filterBtns:hover{
-    color: #FFF;
-    transition: 0.7s;
 }
 #listYourProperty{
     text-decoration: none;

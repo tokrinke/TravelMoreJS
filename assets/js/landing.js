@@ -8,15 +8,25 @@ const logInOpt = document.querySelector(".userLogIn");
 const logInOptMsg = document.querySelector(".userAccInfoBox");
 const users = getArrayFromFirebase("user");
 
+function clearInputs() {
+  inputName.value = "";
+  inputSurname.value = "";
+  inputEmail.value = "";
+  inputPassword.value = "";
+  repeatPassword.value = "";
+}
+
 // SignUp/LogIn 
 signUpBtn.addEventListener("click", function makeAuthMenuVisible() {
   authMenu.style.display = "block";
   logInBar.style.display = "none";
+  clearInputs()
 });
 
 logInOpt.addEventListener("click", function makeLogInMenuVisible() {
     logInBar.style.display = "block";
     authMenu.style.display = "none";
+    clearInputs()
   });
 
 // Image carousel
@@ -109,3 +119,4 @@ logInBtn.addEventListener("click",() => {
       displayAlert("Error", "Account doesn't exist", "error")
     }
 })
+

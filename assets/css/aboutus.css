@@ -183,11 +183,11 @@ body{
     width: 25vw;
     height: 5vh;
     transition: 0.7s;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .addressP:hover{
+    background-color: #00331A;
     transition: 1s;
-    scale: 1.03;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .addressP a{
     text-decoration: none;

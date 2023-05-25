@@ -19,3 +19,12 @@
     from {opacity: .4}
     to {opacity: 1}
 }
+
+@keyframes pictureSlideIn {
+    0%{
+        transform: translateX(1500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
