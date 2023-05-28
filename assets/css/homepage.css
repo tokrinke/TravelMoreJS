@@ -21,6 +21,18 @@ body{
     color: #fff;
     transition: 0.5s;
 }
+h2{
+    color: #FFF;
+    font-family: FigtreeMedium;
+}
+h4{
+    color: #FFF;
+    font-family: FigtreeRegular;
+}
+h5{
+    color: #FFF;
+    font-family: FigtreeLight;
+}
 .backBtn:hover{
     color: #004021;
     transition: 1s;
@@ -175,23 +187,6 @@ body{
     flex-direction: column;
     gap: 2vh;
 }
-
-
-
-
-.mainSection{
-    min-height: 85vh;
-    max-width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2vh;
-    filter: brightness(0.95);
-    padding-top: 1vh;
-}
-
 .searchBar{
     display: flex;
     justify-content: center;
@@ -242,6 +237,80 @@ body{
     font-size: 1em;
     text-decoration: none;
 }
+.mainSection {
+    height: 85vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    padding-top: 1vh;
+}
+.aListing{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.hotelImg{
+    width: 40%;
+    height: 100%;
+}
+.uploadedListingImg{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.otherDetails{
+    width: 60%;
+    height: 100%;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.odTop{
+    width: 100%;
+    height: 50%;
+}
+.odBottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.odBotLeft{
+    
+}
+.contactInListing{
+    display: flex;
+    flex-direction: row; 
+    gap: 1vw;
+}
+.displayStartingPrice{
+    background-color: #00331A;
+    width: 20%;
+    height: 30%;
+    padding-left: 1vh;
+    transition: 0.6s;
+}
+.displayStartingPrice:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: #004021;
+    transition: 0.8s;
+}
+
+
+
+
+
+
+
+
 .chat{
     height: 7vh;
     width: 3.5vw;

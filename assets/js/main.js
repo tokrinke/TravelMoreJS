@@ -35,3 +35,5 @@ function logOut() {
 function displayAlert(title, text, icon) {
   Swal.fire({ title, text, icon });
 }
+
+

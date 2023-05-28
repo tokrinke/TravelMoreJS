@@ -28,30 +28,36 @@
             <div class="wrapperHeader flexCenter">
                 <h1>List your hotel</h1>
             </div>
-            <div class="splitter ">
-                <h2>Listing details:</h2>
+            <div class="splitter">
+                <h2 class="splitterLeft">Listing details:</h2>
+                <h2 class="splitterRight">Upload image:</h2>
             </div>
-            <br>
             <br>
             <div class="wrapperContent">
                <div class="wrapperTop">
                     <div class="basicHotelInfo">
                         <p>Hotel name: </p>
-                        <input class="hotelName hotelDetailBox cursorHover" type="text" placeholder="Hotel name:">
+                        <input id="hotelName" class="hotelName hotelDetailBox cursorHover" type="text" placeholder="Hotel name:">
 
                         </input>
                         <p>Our address:</p>
-                        <input class="hotelAddress hotelDetailBox cursorHover" type="text" placeholder="Address:">
+                        <input id="hotelAddress" class="hotelAddress hotelDetailBox cursorHover" type="text" placeholder="Address:">
 
                         </input>
                         <p>Starting from:</p>
-                        <input class="hotelPrice hotelDetailBox cursorHover" type="text" placeholder="Enter starting price:"> 
+                        <input id="startingPrice" class="hotelPrice hotelDetailBox cursorHover" type="text" placeholder="Enter starting price:"> 
                         </input>
                     </div>
-                    <div class="uploadHotelImage">
-                        <h4>Upload some photos of your hotel:</h4>
-                        <div class="choosePhotos flexCenter cursorHover">
-                            <i class="fa-regular fa-images fa-2xl" style="color: #196a43;"></i>
+                    <div class="wrapperTopRight">
+                        <div class="uploadHotelImage">
+                            <div class="choosePhotos flexCenter cursorHover">
+                                <i class="fa-regular fa-images fa-2xl uploadImgPlace" style="color: #196a43;"></i>
+                                <img class="uploadedImagePreview" src="" alt="uploadedImagePreview">
+                                <div class="uploadHotelImageButtons">
+                                    <label for="uploadImage" class="customUploadImg cursorHover"></label>
+                                    <input id="uploadImage" class="uploadPhotos cursorHover" type="file" ></input>
+                                </div>
+                            </div>
                         </div>
                     </div>
                </div>
@@ -59,24 +65,24 @@
                     <div>
                         <h3>Where is your hotel located?</h3>
                         <p>City: </p>
-                        <input class="enterLoc cursorHover" type="text" placeholder="Enter city: ">
+                        <input id="enterLoc" class="enterLoc cursorHover" type="text" placeholder="Enter city: ">
                     </div>
                     <div class="locations">
                         <h4>Popular locations:</h4>
                         <div class="presetCities">
-                            <div class="Tbilisi cityBox flexCenter">
+                            <div id="enterLoc" class="Tbilisi cityBox flexCenter">
                                 Tbilisi
                             </div>
-                            <div class="Batumi cityBox flexCenter">
+                            <div id="enterLoc" class="Batumi cityBox flexCenter">
                                 Batumi
                             </div>
-                            <div class="Kobuleti cityBox flexCenter">
+                            <div id="enterLoc" class="Kobuleti cityBox flexCenter">
                                 Kobuleti
                             </div>
-                            <div class="Kutaisi cityBox flexCenter">
+                            <div id="enterLoc" class="Kutaisi cityBox flexCenter">
                                 Kutaisi
                             </div>
-                            <div class="Mtskheta cityBox flexCenter">
+                            <div id="enterLoc" class="Mtskheta cityBox flexCenter">
                                 Mtskheta
                             </div>
                         </div>
@@ -89,22 +95,22 @@
                             <div class="contactBottomInfo">
                                 <div class="contactName">
                                     <p>Hotelier: </p>
-                                    <input class="enterContactName contactBox cursorHover" type="text" placeholder="Name and surname: ">
+                                    <input id="contactName" class="enterContactName contactBox cursorHover" type="text" placeholder="Name and surname: ">
                                 </div>
                                 <div class="contactEmail">
                                     <p>Hotel email: </p>
-                                    <input class="enterContactEmail contactBox cursorHover" type="text" placeholder="Contact email: ">
+                                    <input id="contactEmail" class="enterContactEmail contactBox cursorHover" type="text" placeholder="Contact email: ">
                                 </div>
                                 <div class="contactNumber">
                                     <p>Hotel number: </p>
-                                    <input class="enterContactNumber contactBox cursorHover" type="text" placeholder="Contact number: ">
+                                    <input id="contactNumber" class="enterContactNumber contactBox cursorHover" type="text" placeholder="Contact number: ">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="wrapperFoot flexCenter">
-                    <button class="saveBtn defaultBtn cursorHover">Save</button>
+                    <button id="uploadListingBtn" class="saveBtn defaultBtn cursorHover">Save</button>
                 </div>
             </div>
     </section>
@@ -119,6 +125,6 @@
     <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
     <script src="./assets/js/firebase.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/listproperty.js"></script>
+    <script src="./assets/js/createlisting.js"></script>
 </body>
 </html>
