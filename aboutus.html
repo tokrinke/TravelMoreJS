@@ -47,8 +47,8 @@
                 or issues that our customers may have. </p>
             </div>
             <div class="contactRight flexCenter">
-                <div class="chatButton cursorHover">
-                    <div class="chat cursorHover">
+                <div class="chatButton cursorHover" onclick="openChat()">
+                    <div class="chat cursorHover" >
                         <i id="chatIcon" class="fa-solid fa-comments fa-2xl cursorHover" style="color: #196A43;"></i>
                     </div>
                     <div class="chatInfo">
@@ -92,9 +92,24 @@
                 <h2>Our number:<br>+ 0 32 99 99 99 / + 995 599 99 99 99</h2>
             </div>
         </footer>
+        <div class="chatBox">
+            <div class="chatBoxHead chatBoxTop">
+                What can we help you with?
+                <div class="closeChat ">
+                    <i class="fa-solid fa-xmark fa-xl cursorHover" style="color: #ffffff;" onclick="closeChat()"></i>
+                </div>
+            </div>
+            <div class="chatBoxMsgs chatBoxMid">
+    
+            </div>
+            <div class="chatBoxTypeMsg chatBoxBot">
+    
+            </div>
+        </div>
     </section>
 
     <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/aboutus.js"></script>
 </body>
 </html>

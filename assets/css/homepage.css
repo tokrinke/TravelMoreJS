@@ -314,7 +314,7 @@ h5{
 .chat{
     height: 7vh;
     width: 3.5vw;
-    background-color: #131313;
+    background-color: #111111;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     position: fixed;
     z-index: 1;
@@ -324,7 +324,7 @@ h5{
     align-items: center;
     justify-content: center;
     transition: 0.7s;
-    animation: Appear 1.3s;
+    animation: Appear 0.4s;
 }
 .chat:hover{
     transition: 1s;
@@ -343,6 +343,104 @@ h5{
     transition: 1s;
     animation: Appear 1.3s;
 }
+.chatBox{
+    animation: Appear 0.4s;
+    height: 50vh;
+    width: 25vw;
+    background-color: #131313;
+    border-radius: 4px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 3vh;
+    right: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.chatBoxTop{
+    font-family: FigtreeMedium;
+    height: 10%;
+    max-width: 100%;
+    background-color: #004021;
+    color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.closeChat{
+
+}
+.chatBoxMid{
+    height: 78%;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.chatBoxMsgs{
+    height: 95%;
+    width: 95%;
+    overflow-y: scroll;
+    font-family: FigtreeMedium;
+}
+.chatBoxMsgs::-webkit-scrollbar{
+    display: none;
+}
+.msgBlock{
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    animation: Appear 0.4s;
+}
+.sentByUser {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.msgContent .sentByUser{
+   
+}
+.msgContent{
+    width: 55%;
+    height: 33%;
+    background-color: #004021;
+}
+.chatBoxBot{
+    font-family: FigtreeMedium;
+    height: 12%;
+    width: 100%;
+    background-color: #141414;
+    color: #FFF;
+}
+#txtMsg{
+    font-family: FigtreeMedium;
+    height: 80%;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #181818;
+    color: #FFF;
+    font-size: 1.5vh;
+    border: none;
+    resize: none;
+    padding-left: 0.3vw;
+}
+#txtMsg:focus{
+    outline: none;
+}
+.sendMsg{
+    width: 10%;
+    height: 90%;
+}
+.sendMsgBtn{
+    
+}
+
+
+
+
 .bigInput{
     border-top: none;
     border-right: none;

@@ -101,15 +101,53 @@
     <div class="chatInfo">
         Have a question? We are happy to answer!
     </div>
-    <div class="chat cursorHover">
+    <div class="chat cursorHover" onclick="openChat()">
         <i id="chatIcon" class="fa-solid fa-comments fa-2xl cursorHover" style="color: #196A43;"></i>
     </div>
-
+    <div class="chatBox">
+        <div class="chatBoxHead chatBoxTop">
+            What can we help you with?
+            <div class="closeChat ">
+                <i class="fa-solid fa-xmark fa-xl cursorHover" style="color: #ffffff;" onclick="closeChat()"></i>
+            </div>
+        </div>
+        <div class="chatBoxMid flexCenter">
+            <div class="chatBoxMsgs">
+                <div class="msgBlock">
+                    <div class="aboveMsg">
+                        admin
+                    </div>  
+                    <div class="msgContent">
+                        incomingMsg
+                    </div>
+                    <div class="msgDate">
+                        00-00-00
+                    </div>
+                </div>
+                <div class="msgBlock  sentByUser">
+                    <div class="aboveMsg">
+                        userFullname
+                    </div>  
+                    <div class="msgContent sentByUser">
+                        outgoingMsg
+                    </div>
+                    <div class="msgDate">
+                        00-00-00
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatBoxTypeMsg chatBoxBot flexCenter">
+            <textarea placeholder="Enter message" id="txtMsg" onclick="sendMessage()"></textarea>
+            <div class="sendMsg flexCenter cursorHover">
+                <i class="fa-solid fa-paper-plane fa-xl sendMsgBtn" style="color: #196A43;"></i>
+            </div>
+        </div>
+    </div>
     
     <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
     <script src="./assets/js/firebase.js"></script>
     <script src="./assets/js/main.js"></script>
-    
     <script src="./assets/js/homepage.js"></script>
     <script src="./assets/js/chat.js"></script>
 </body>

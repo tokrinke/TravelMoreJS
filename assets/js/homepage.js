@@ -1,7 +1,7 @@
+// log out
 const userIcon = document.querySelector("#userIcon");
 const userIconMenu = document.querySelector(".userIconMenu");
 const logOutBtn = document.querySelector(".logOutBtn");
-
 
 userIcon.addEventListener("click", () => {
   if (isMenuVisible) {

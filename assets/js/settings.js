@@ -17,3 +17,11 @@ editListings.addEventListener("click", function makeEditListingsVisible() {
   editListings.style.borderBottom = "2px solid #004021";
   editInfo.style.borderBottom = "none";
 });
+
+//Edit info
+const userName = document.querySelector('#name');
+const userSurname = document.querySelector('#surname');
+const userPassword = document.querySelector('#password');
+const repeatPass = document.querySelector('#repeatpassword');
+const userEmail = document.querySelector('#email');
+const userNumber = document.querySelector('#number');
