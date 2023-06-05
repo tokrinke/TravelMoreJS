@@ -2,13 +2,13 @@ const path = location.href.split("/").pop().split(".")[0];
 console.log(path);
 
 if (path === "landing") {
-  const activeUser = sessionStorage.getItem("current_user_data");
+  const activeUser = sessionStorage.getItem("activeUserInfo");
   const userToken = sessionStorage.getItem("userToken");
   if (activeUser || userToken) {
     location.href = "homepage.html";
   }
 } else {
-  const activeUser = sessionStorage.getItem("current_user_data");
+  const activeUser = sessionStorage.getItem("activeUserInfo");
   const userToken = sessionStorage.getItem("userToken");
   if (path === "listproperty") {
     if (activeUser || userToken) {
@@ -17,7 +17,7 @@ if (path === "landing") {
     }
   }
 }
-const activeUser = sessionStorage.getItem("current_user_data");
+const activeUser = sessionStorage.getItem("activeUserInfo");
 const userToken = sessionStorage.getItem("userToken");
 if (path === "settings") {
   if (activeUser || userToken) {
@@ -27,7 +27,7 @@ if (path === "settings") {
 }
 
 function logOut() {
-  sessionStorage.removeItem("current_user_data");
+  sessionStorage.removeItem("activeUserInfo");
   sessionStorage.removeItem("userToken");
   location.href = "./landing.html";
 }
@@ -35,5 +35,3 @@ function logOut() {
 function displayAlert(title, text, icon) {
   Swal.fire({ title, text, icon });
 }
-
-

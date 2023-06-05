@@ -8,15 +8,7 @@ const logInOpt = document.querySelector(".userLogIn");
 const logInOptMsg = document.querySelector(".userAccInfoBox");
 const users = getArrayFromFirebase("user");
 
-function clearInputs() {
-  inputName.value = "";
-  inputSurname.value = "";
-  inputEmail.value = "";
-  inputPassword.value = "";
-  repeatPassword.value = "";
-}
-
-// SignUp/LogIn
+// SignUp/LogIn menu toggle
 signUpBtn.addEventListener("click", function makeAuthMenuVisible() {
   authMenu.style.display = "block";
   logInBar.style.display = "none";
@@ -29,23 +21,7 @@ logInOpt.addEventListener("click", function makeLogInMenuVisible() {
   clearInputs();
 });
 
-// Image carousel
-
-// let carouselIndex = 0;
-// showCarouselImgs();
-
-// function showCarouselImgs(){
-//   let carousel = document.querySelectorAll(".carouselImgs");
-//   for (let i = 0; i < carousel.length; i++){
-//     carousel[i].style.display = "none";
-//   }
-//   carouselIndex++
-//   if (carouselIndex > carousel.length) {carouselIndex = 1}
-//   carousel[carouselIndex-1].style.display = "block";
-//   setTimeout(showCarouselImgs, 4000);
-// }
-
-//Auth logic
+// inputs/btns
 const logInBtn = document.querySelector("#finishLogIn");
 const createAccBtn = document.querySelector("#finishSignUp");
 const inputName = document.querySelector(".inputName");
@@ -74,7 +50,7 @@ createAccBtn.addEventListener("click", () => {
       );
     } else {
       createAccBtn.disabled = true;
-      AddElementInFirebase("user", {
+      addElementInFirebase("user", {
         name: nameVal,
         surname: surnameVal,
         email: emailVal,
@@ -83,18 +59,18 @@ createAccBtn.addEventListener("click", () => {
       displayAlert("User successfully registered", `${emailVal}`, "success");
       const updatedFirebaseDB = getArrayFromFirebase("user");
       setTimeout(() => {
-        let activeUser;
+        let activeUserData;
         updatedFirebaseDB.forEach((user) => {
           if (user.data.email === emailVal) {
-            activeUser = user;
+            activeUserData = user;
             return;
           }
         });
-        sessionStorage.setItem("token", activeUser);
+        sessionStorage.setItem("userToken", activeUserData.userid);
         sessionStorage.setItem(
           "activeUserInfo",
           JSON.stringify({
-            fullname: activeUser.data.name + activeUser.data.surname,
+            fullname: activeUserData.data.name + activeUserData.data.surname,
           })
         );
         location.href = "./homepage.html";
@@ -120,16 +96,16 @@ createAccBtn.addEventListener("click", () => {
 logInBtn.addEventListener("click", () => {
   let emailVal = inputLogEmail.value;
   let passwordVal = inputLogPassword.value;
-  const activeUser = users.find(
+  const activeUserData = users.find(
     (user) => user.data.email === emailVal && user.data.password === passwordVal
   );
-  if (activeUser) {
+  if (activeUserData) {
     logInBtn.disabled = true;
-    sessionStorage.setItem("userToken", activeUser);
+    sessionStorage.setItem("userToken", activeUserData.userid);
     sessionStorage.setItem(
       "activeUserInfo",
       JSON.stringify({
-        fullname: activeUser.data.name + " " + activeUser.data.surname,
+        fullname: activeUserData.data.name + " " + activeUserData.data.surname,
       })
     );
     setTimeout(() => {
@@ -139,3 +115,28 @@ logInBtn.addEventListener("click", () => {
     displayAlert("Error", "Account doesn't exist", "error");
   }
 });
+
+// functions
+function clearInputs() {
+  inputName.value = "";
+  inputSurname.value = "";
+  inputEmail.value = "";
+  inputPassword.value = "";
+  repeatPassword.value = "";
+}
+
+// Image carousel
+
+// let carouselIndex = 0;
+// showCarouselImgs();
+
+// function showCarouselImgs(){
+//   let carousel = document.querySelectorAll(".carouselImgs");
+//   for (let i = 0; i < carousel.length; i++){
+//     carousel[i].style.display = "none";
+//   }
+//   carouselIndex++
+//   if (carouselIndex > carousel.length) {carouselIndex = 1}
+//   carousel[carouselIndex-1].style.display = "block";
+//   setTimeout(showCarouselImgs, 4000);
+// }

@@ -29,10 +29,12 @@
                 Hello, "userFullName"
             </div>
             <div class="profilePictureSection flexCenter">
-                <div class="displaysProfilePic flexCenter cursorHover">
+                <div id="displaysProfilePic" class="displaysProfilePic flexCenter cursorHover">
+                    <img class="profilePic" src="">
+                    <label for="uploadPfpBtn" class="cursorHover"></label>
+                    <input id="uploadPfpBtn" class=" cursorHover" type="file" ></input>
                     <i class="fa-regular fa-images fa-2xl" style="color: #196a43;"></i>
                 </div>
-                <button class="uploadProfilePicBtn defaultBtn cursorHover">Upload new photo</button>
                 <div class="profilePicInfoBox flexCenter">
                     *Upload your desired avatar. Larger image will be resized automatically.*
                     <br>
@@ -117,7 +119,7 @@
                     </div>
                 </div>
                 <div class="formFooter flexCenter appear">
-                    <button class="cursorHover appear">Save changes</button>
+                    <button id="saveChangesBtn" class="cursorHover appear">Save changes</button>
                 </div>
             </div>
         </div>
@@ -131,11 +133,12 @@
         </div>
     </footer>
 
-  
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
     <script src="./assets/js/firebase.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/settings.js"></script>
-    <script src="./assets/js/chat.js"></script>
 </body>
 </html>

@@ -89,9 +89,9 @@
     <footer class="hpFooter">
         <div class="newsletter">
             <p>Subscribe to our newsletter and we will send you the best deals.</p>
-            <input class="bigInput" type="email" placeholder="Your email address">
+            <!-- <input class="bigInput" type="email" placeholder="Your email address"> -->
         </div>
-        <button class="defaultBtn cursorHover">Subscribe</button>
+        <button class="defaultBtn cursorHover subBtn">Subscribe</button>
         <div class="socials">
             <a id="fbBtn" href="https://facebook.com"><i class="fa-brands fa-facebook-f fa-xl cursorHover" style="color: #ffffff;"></i></a>
             <a id="twBtn" href="https://twitter.com"><i class="fa-brands fa-twitter fa-xl cursorHover" style="color: #ffffff;"></i></a>
@@ -101,7 +101,7 @@
     <div class="chatInfo">
         Have a question? We are happy to answer!
     </div>
-    <div class="chat cursorHover" onclick="openChat()">
+    <div id="chatboxbtn" class="chat cursorHover" onclick="openChat()">
         <i id="chatIcon" class="fa-solid fa-comments fa-2xl cursorHover" style="color: #196A43;"></i>
     </div>
     <div class="chatBox">
@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="chatBoxMid flexCenter">
-            <div class="chatBoxMsgs">
+            <div class="chatBoxMsgs" id="displayMsgs">
                 <div class="msgBlock">
                     <div class="aboveMsg">
                         admin
@@ -124,11 +124,33 @@
                         00-00-00
                     </div>
                 </div>
-                <div class="msgBlock  sentByUser">
+                <div class="sentByUserMsgBlock">
                     <div class="aboveMsg">
                         userFullname
                     </div>  
-                    <div class="msgContent sentByUser">
+                    <div class="sentByUsermsgContent">
+                        outgoingMsg
+                    </div>
+                    <div class="msgDate">
+                        00-00-00
+                    </div>
+                </div>
+                <div class="msgBlock">
+                    <div class="aboveMsg">
+                        admin
+                    </div>  
+                    <div class="msgContent">
+                        incomingMsg
+                    </div>
+                    <div class="msgDate">
+                        00-00-00
+                    </div>
+                </div>
+                <div class="sentByUserMsgBlock">
+                    <div class="aboveMsg">
+                        userFullname
+                    </div>  
+                    <div class="sentByUsermsgContent">
                         outgoingMsg
                     </div>
                     <div class="msgDate">
@@ -138,17 +160,20 @@
             </div>
         </div>
         <div class="chatBoxTypeMsg chatBoxBot flexCenter">
-            <textarea placeholder="Enter message" id="txtMsg" onclick="sendMessage()"></textarea>
+            <textarea placeholder="Enter message" id="txtMsg"></textarea>
             <div class="sendMsg flexCenter cursorHover">
                 <i class="fa-solid fa-paper-plane fa-xl sendMsgBtn" style="color: #196A43;"></i>
             </div>
         </div>
     </div>
     
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
     <script src="./assets/js/firebase.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/homepage.js"></script>
     <script src="./assets/js/chat.js"></script>
-</body>
+    <script src="./assets/js/homepage.js"></script>
+</body> 
 </html>

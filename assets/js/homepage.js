@@ -13,5 +13,24 @@ userIcon.addEventListener("click", () => {
 });
 let isMenuVisible = false;
 
-// Image slider
+// newsletter
+const subBtn = document.querySelector(".subBtn");
 
+subBtn.addEventListener("click", () => {
+  (async () => {
+
+    const { value: email } = await Swal.fire({
+      title: 'Input email address',
+      input: 'email',
+      inputLabel: 'Your email address',
+      inputPlaceholder: 'Enter your email address'
+    })
+    
+    if (email) {
+      Swal.fire(`Subscribed with: ${email}`)
+    }
+    addElementInFirebase("newsletter", {
+      email: email
+    })
+    })()
+})

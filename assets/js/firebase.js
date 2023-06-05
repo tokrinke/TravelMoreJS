@@ -28,7 +28,7 @@ function AddRefInFirebase(REF) {
   firebase.database().ref(REF).set(REF);
 }
 
-function AddElementInFirebase(REF, data) {
+function addElementInFirebase(REF, data) {
   firebase.database().ref(`${REF}/${randomID()}`).set(data);
 }
 

@@ -1,4 +1,3 @@
-
 // Upload Image
 
 const chooseFileBtn = document.querySelector("#userUploadedImg");
@@ -14,3 +13,4 @@ chooseFileBtn.addEventListener("change", function () {
   });
   reader.readAsDataURL(this.files[0]);
 });
+

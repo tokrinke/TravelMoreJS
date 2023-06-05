@@ -6,6 +6,9 @@ body{
     height: 100vh;
     width: 100vw;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 .cursorHover{
     cursor: pointer;
 }

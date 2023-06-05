@@ -15,37 +15,81 @@ const chatBox = document.querySelector(".chatBox");
 const sendMsgBtn = document.querySelector(".sendMsgBtn");
 const inputMsg = document.querySelector("#txtMsg");
 const aboveMsg = document.querySelector(".aboveMsg");
-
+const displayMsgs = document.querySelector("#displayMsgs");
 
 function openChat() {
   chatBox.style.display = "flex";
-  if(chatBox.style.display = "flex"){
+  if ((chatBox.style.display = "flex")) {
     chatIcon.style.display = "none";
   }
 }
 
 function closeChat() {
   chatBox.style.display = "none";
-  if(chatBox.style.display = "none"){
+  if ((chatBox.style.display = "none")) {
     chatIcon.style.display = "flex";
   }
 }
 
-function sendMessage(){
-  const message = inputMsg.value;
-  if(message !==" " && activeUser !==" "){
-    AddElementInFirebase("messages", {
-      message: message,
-      name: JSON.parse(activeUser),
-      surname: JSON.parse(activeUser),
-      createdAt: new Date().toString()
-    } )
-  }
-
+function clearMsgInputBar() {
+  inputMsg.value = "";
 }
 
 inputMsg.addEventListener("keydown", (pressed) => {
-  if(pressed.key === "Enter"){
+  if (pressed.key === "Enter") {
     sendMessage();
   }
-})
+});
+
+sendMsgBtn.addEventListener("click", () => {
+  sendMessage();
+});
+
+function sendMessage() {
+  const message = inputMsg.value;
+  if (activeUser !== " " && userToken !== " " && message !== " ") {
+    addElementInFirebase("messages", {
+      authorID: userToken,
+      message: message,
+      fullname: JSON.parse(activeUser).fullname,
+      sentAt: new Date().toString(),
+    });
+  }
+  clearMsgInputBar();
+}
+
+firebase
+  .database()
+  .ref("messages")
+  .on("child_added", (snapshot) => {
+    const response = snapshot.val();
+    if (response.authorID === userToken) {
+      displayMsgs.innerHTML += `
+        <div class="sentByUserMsgBlock">
+          <div class="aboveMsg">
+            ${response.fullname}
+          </div>  
+          <div class="sentByUsermsgContent">
+            ${response.message}
+          </div>
+          <div class="msgDate">
+            ${response.sentAt.split(" ").splice(0,5).join(" ")}
+          </div>
+        </div>
+      `
+    } else {
+      displayMsgs.innerHTML += `
+        <div class="msgBlock">
+          <div class="aboveMsg">
+            ${response.fullname}
+          </div>  
+          <div class="msgContent">
+            ${response.message}
+          </div>
+          <div class="msgDate">
+            ${response.sentAt.split(" ").splice(0,5).join(" ")}
+          </div>
+        </div>
+      `
+    }
+  });

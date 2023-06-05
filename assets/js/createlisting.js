@@ -24,7 +24,6 @@ const uploadedImagePreview = document.querySelector("uploadedImagePreview");
 //     reader.readAsDataURL(this.files[0]);
 //   })
 
-
 uploadImage.addEventListener("change", () => {
   const fileReader = new FileReader();
 
@@ -41,20 +40,36 @@ uploadImage.addEventListener("change", () => {
 uploadListingBtn.addEventListener("click", () => {
   let FormHotelName = hotelName.value;
   let FormHotelLocation = hotelLocation.value;
+  let FormStartingPrice = startingPrice.value;
   let FormHotelAddress = hotelAddress.value;
   let FormContactName = contactName.value;
   let FormContactEmail = contactEmail.value;
   let FormContactNumber = contactNumber.value;
   let FormUploadedImage = document.querySelector(".uploadPhotos").src;
-  console.log(
-    FormHotelName,
-    FormHotelLocation,
-    FormHotelAddress,
-    FormContactName,
-    FormContactEmail,
-    FormContactNumber,
-    FormUploadedImage
-  );
+
+  if (FormHotelName && FormHotelLocation && FormStartingPrice && FormHotelAddress && FormContactName && FormContactEmail && FormContactEmail && FormContactNumber && FormUploadedImage
+  ) {
+    setTimeout(() => {
+      AddElementInFirebase("listings", {
+        FormHotelName,
+        FormHotelLocation,
+        FormHotelAddress,
+        FormContactName,
+        FormContactEmail,
+        FormContactNumber,
+        FormUploadedImage,
+        createdAt: new Date().toString(),
+      });
+      displayAlert("Success", "Your listing was added succesfully", "success");
+      location.href = "./homepage.html";
+    }, 2000);
+  } else {
+    displayAlert(
+      "Error",
+      "More information needed, fill the form fully",
+      "error"
+    );
+  }
 });
 
 //

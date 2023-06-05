@@ -5,6 +5,9 @@ body{
     overflow-x: hidden;
     height: 100vh;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 .cursorHover{
     cursor: pointer;
 }
@@ -31,6 +34,38 @@ body{
 .defaultBtn:hover{
     box-shadow: rgba(0, 0, 0, 0.6) 0px 18px 50px -10px;
     transition: 0.8s;
+}
+.uploadProfilePicBtn{
+    position: relative;
+}
+#uploadPfpBtn{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0.5vh;
+}
+.uploadPfpBtn{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+.profilePic{
+    border: none;
+    outline: none;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+input[type="file"]{
+    color: transparent;
+    
+}
+input::file-selector-button{
+    color: transparent;
+    border: none;
+    background-color: transparent;
 }
 .settingsHeader{
     height: 10vh;
@@ -93,7 +128,8 @@ body{
 }
 .displaysProfilePic{
     border: 3px dashed #004021;
-    border-radius: 50%;
+    position: relative;
+    
     height: 14vh;
     width: 7vw;
     transition: 0.6s;
