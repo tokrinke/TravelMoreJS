@@ -55,6 +55,7 @@ createAccBtn.addEventListener("click", () => {
         surname: surnameVal,
         email: emailVal,
         password: passwordVal,
+        createdAt: new Date().toString(),
       });
       displayAlert("User successfully registered", `${emailVal}`, "success");
       const updatedFirebaseDB = getArrayFromFirebase("user");
@@ -70,7 +71,8 @@ createAccBtn.addEventListener("click", () => {
         sessionStorage.setItem(
           "activeUserInfo",
           JSON.stringify({
-            fullname: activeUserData.data.name + activeUserData.data.surname,
+            name: activeUserData.data.name,
+            surname: activeUserData.data.surname
           })
         );
         location.href = "./homepage.html";
@@ -105,7 +107,8 @@ logInBtn.addEventListener("click", () => {
     sessionStorage.setItem(
       "activeUserInfo",
       JSON.stringify({
-        fullname: activeUserData.data.name + " " + activeUserData.data.surname,
+        name: activeUserData.data.name,
+        surname: activeUserData.data.surname,
       })
     );
     setTimeout(() => {

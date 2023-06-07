@@ -77,3 +77,30 @@ saveChangesBtn.addEventListener("click", () => {
     );
   }
 });
+// remove listing
+
+// reflect active user
+// const userFullnameDisplay = document.querySelector("#userFullname");
+// const userCreatedAt = document.querySelector("#userRegDate");
+// let activeUserDetails = getElementFromFirebase("user", `${userToken}`);
+// const updatedFirebaseDataBase = getArrayFromFirebase("user");
+// updatedFirebaseDataBase.forEach((user) => {
+//   if (user.data.userToken === userToken) {
+//     activeUserDetails = user;
+//     return;
+//   }
+// });
+// console.log(activeUserDetails);
+
+// if(userToken && activeUser){
+//   userFullnameDisplay.innerHTML = JSON.stringify({
+//     name: activeUserDetails.data.name,
+//     surname: activeUserDetails.data.surname
+//   })
+//   // userFullnameDisplay.innerHTML = `Hello, ${activeUserDetails.data.name + " " + activeUserDetails.data.surname}`;
+// }
+
+// if(userToken && activeUser){
+
+//   // userCreatedAt.innerHTML = `Member since: ${(activeUser).createdAt}`;
+// }

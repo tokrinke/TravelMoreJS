@@ -1,11 +1,22 @@
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAmZn51k_S8pwynIfFHcNzmEMDt9fBNJ7Q",
+//   authDomain: "travelmoredb.firebaseapp.com",
+//   projectId: "travelmoredb",
+//   databaseURL: "https://travelmoredb-default-rtdb.firebaseio.com/",
+//   storageBucket: "travelmoredb.appspot.com",
+//   messagingSenderId: "25562550851",
+//   appId: "1:25562550851:web:9dd8989f35776940177af6",
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAmZn51k_S8pwynIfFHcNzmEMDt9fBNJ7Q",
-  authDomain: "travelmoredb.firebaseapp.com",
-  projectId: "travelmoredb",
-  databaseURL: "https://travelmoredb-default-rtdb.firebaseio.com/",
-  storageBucket: "travelmoredb.appspot.com",
-  messagingSenderId: "25562550851",
-  appId: "1:25562550851:web:9dd8989f35776940177af6",
+  apiKey: "AIzaSyBEFzxHoT5sSSoOKz2Im5mFHShm5qMrrv8",
+  authDomain: "travelmoredatabase.firebaseapp.com",
+  projectId: "travelmoredatabase",
+  databaseURL: "https://travelmoredatabase-default-rtdb.firebaseio.com/",
+  storageBucket: "travelmoredatabase.appspot.com",
+  messagingSenderId: "613369058227",
+  appId: "1:613369058227:web:1228662bd81bf9a6ba31c6",
+  measurementId: "G-497SCBHCX9",
 };
 
 firebase.initializeApp(firebaseConfig);

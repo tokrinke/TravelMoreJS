@@ -24,95 +24,76 @@
         </div>
     </header>
     <section class="listingsMainSection flexCenter">
-        <div class="mainWrapper">
-            <div class="wrapperHeader flexCenter">
-                <h1>List your hotel</h1>
+        <div class="createListingForm">
+            <div class="listingFormHeader">
+                List your property
             </div>
-            <div class="splitter">
-                <h2 class="splitterLeft">Listing details:</h2>
-                <h2 class="splitterRight">Upload image:</h2>
-            </div>
-            <br>
-            <div class="wrapperContent">
-               <div class="wrapperTop">
-                    <div class="basicHotelInfo">
-                        <p>Hotel name: </p>
-                        <input id="hotelName" class="hotelName hotelDetailBox cursorHover" type="text" placeholder="Hotel name:">
-
-                        </input>
-                        <p>Our address:</p>
-                        <input id="hotelAddress" class="hotelAddress hotelDetailBox cursorHover" type="text" placeholder="Address:">
-
-                        </input>
-                        <p>Starting from:</p>
-                        <input id="startingPrice" class="hotelPrice hotelDetailBox cursorHover" type="text" placeholder="Enter starting price:"> 
-                        </input>
-                    </div>
-                    <div class="wrapperTopRight">
-                        <div class="uploadHotelImage">
-                            <div class="choosePhotos flexCenter cursorHover">
-                                <i class="fa-regular fa-images fa-2xl uploadImgPlace" style="color: #196a43;"></i>
-                                <img class="uploadedImagePreview" src="" alt="uploadedImagePreview">
-                                <div class="uploadHotelImageButtons">
-                                    <label for="uploadImage" class="customUploadImg cursorHover"></label>
-                                    <input id="uploadImage" class="uploadPhotos cursorHover" type="file" ></input>
-                                </div>
-                            </div>
+            <div class="listingFormTop">
+                <div class="listingFormTopLeft">
+                    <h3>Basic information:</h3>
+                    <div class="basicInfoInputs">
+                        <div>
+                            <label for="hotelName" class="hotelDetailInputsLabels">Hotel name:</label>
+                            <input id="hotelName" class="hotelDetailInputs cursorHover" type="text" placeholder="Name: ">
                         </div>
-                    </div>
-               </div>
-                <div class="chooseLoc">
-                    <div>
-                        <h3>Where is your hotel located?</h3>
-                        <p>City: </p>
-                        <input id="enterLoc" class="enterLoc cursorHover" type="text" placeholder="Enter city: ">
-                    </div>
-                    <div class="locations">
-                        <h4>Popular locations:</h4>
-                        <div class="presetCities">
-                            <button id="enterLoc" class="Tbilisi cityBox flexCenter">
-                                Tbilisi
-                            </button>
-                            <button id="enterLoc" class="Batumi cityBox flexCenter">
-                                Batumi
-                            </button>
-                            <button id="enterLoc" class="Kobuleti cityBox flexCenter">
-                                Kobuleti
-                            </button>
-                            <button id="enterLoc" class="Kutaisi cityBox flexCenter">
-                                Kutaisi
-                            </button>
-                            <button id="enterLoc" class="Mtskheta cityBox flexCenter">
-                                Mtskheta
-                            </button>
+                        <div>
+                            <label for="hotelLocation" class="hotelDetailInputsLabels">Located in:</label>
+                            <input id="hotelLocation" class="hotelDetailInputs cursorHover" type="text" placeholder="City name:">
                         </div>
-                    </div>
-                    </div>
-                    <br>
-                    <div class="setContactInfo">
-                        <div class="contactBottom">
-                            <h3>Add contact details</h3>
-                            <div class="contactBottomInfo">
-                                <div class="contactName">
-                                    <p>Hotelier: </p>
-                                    <input id="contactName" class="enterContactName contactBox cursorHover" type="text" placeholder="Name and surname: ">
-                                </div>
-                                <div class="contactEmail">
-                                    <p>Hotel email: </p>
-                                    <input id="contactEmail" class="enterContactEmail contactBox cursorHover" type="text" placeholder="Contact email: ">
-                                </div>
-                                <div class="contactNumber">
-                                    <p>Hotel number: </p>
-                                    <input id="contactNumber" class="enterContactNumber contactBox cursorHover" type="text" placeholder="Contact number: ">
-                                </div>
-                            </div>
+                        <div>
+                            <label for="hotelAddress" class="hotelDetailInputsLabels">Address:</label>
+                            <input id="hotelAddress" class="hotelDetailInputs cursorHover" type="text" placeholder="Enter hotel address:">
                         </div>
                     </div>
                 </div>
-                <div class="wrapperFoot flexCenter">
-                    <button id="uploadListingBtn" class="saveBtn defaultBtn cursorHover">Save</button>
+                <div class="listingFormTopRight flexCenter">
+                    <div class="cursorHover flexCenter">
+                        <img id="displayHotelImage" src="" alt="hotelImage" >
+                        <input id="uploadHotelImageBtn" type="file" class="cursorHover">
+                        <i id="imgIconFA" class="fa-sharp fa-solid fa-image fa-2xl" style="color: #004021;"></i>
+                    </div>
                 </div>
             </div>
+            <div class="listingFormBottom">
+                <div class="prices">
+                    <h3>Prices:</h3>
+                    <div class="pricesInputs">
+                        <div>
+                            <label for="oneNightPrice" class="hotelDetailInputsLabels">One night:</label>
+                            <input id="oneNightPrice" class="hotelDetailInputs cursorHover" type="number" placeholder="Price for one night:">
+                        </div>
+                        <div>
+                            <label for="oneWeekPrice" class="hotelDetailInputsLabels">One Week:</label>
+                            <input id="oneWeekPrice" class="hotelDetailInputs cursorHover" type="number" placeholder="Price for one week:">
+                        </div>
+                        <div>
+                            <label for="oneMonthPrice" class="hotelDetailInputsLabels">One month:</label>
+                            <input id="oneMonthPrice" class="hotelDetailInputs cursorHover" type="number" placeholder="Price for one month:">
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelierDetails">
+                    <h3>Contact information:</h3>
+                    <div class="hotelierDetailsInputs">
+                        <div>
+                            <label for="contactName" class="hotelDetailInputsLabels">Hotelier's name:</label>
+                            <input id="contactName" class="hotelDetailInputs cursorHover" type="text" placeholder="Name: ">
+                        </div>
+                        <div>
+                            <label for="contactEmail" class="hotelDetailInputsLabels">Contact email:</label>
+                            <input id="contactEmail" class="hotelDetailInputs cursorHover" type="email" placeholder="Email: ">
+                        </div>
+                        <div>
+                            <label for="contactNumber" class="hotelDetailInputsLabels">Contact :</label>
+                            <input id="contactNumber" class="hotelDetailInputs cursorHover" type="text" placeholder="Number: ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="listingFormFooter flexCenter">
+                <button id="createListingBtn" class="cursorHover">Create Listing</button>
+            </div>
+        </div>
     </section>
     <footer class="listpropertyFooter">
         <p class="footerP appear">Follow us!</p>

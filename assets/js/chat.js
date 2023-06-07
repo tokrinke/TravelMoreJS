@@ -73,10 +73,10 @@ firebase
             ${response.message}
           </div>
           <div class="msgDate">
-            ${response.sentAt.split(" ").splice(0,5).join(" ")}
+            ${response.sentAt.split(" ").splice(0, 5).join(" ")}
           </div>
         </div>
-      `
+      `;
     } else {
       displayMsgs.innerHTML += `
         <div class="msgBlock">
@@ -87,9 +87,9 @@ firebase
             ${response.message}
           </div>
           <div class="msgDate">
-            ${response.sentAt.split(" ").splice(0,5).join(" ")}
+            ${response.sentAt.split(" ").splice(0, 5).join(" ")}
           </div>
         </div>
-      `
+      `;
     }
   });
