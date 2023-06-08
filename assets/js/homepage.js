@@ -35,34 +35,74 @@ subBtn.addEventListener("click", () => {
 });
 
 // Add listing to the homepage
-const listings = getArrayFromFirebase("listings");
 const listingsSection = document.querySelector("#listingsSection");
 
-listings.forEach((listing) => {
-  listingsSection.innerHTML += `
-        <div class="aListing">
-              <div class="hotelImg">
-                <img id="uploadedImg" class="uploadedListingImg cursorHover" src="${listing.data.FormUploadedImage}" alt="hotelImage">
+firebase
+  .database()
+  .ref("listings")
+  .on("child_added", (snapshot) => {
+    const response = snapshot.val();
+    listingsSection.innerHTML += `
+          <div class="aListing">
+            <div class="hotelImg">
+                  <img id="uploadedImg" class="uploadedListingImg cursorHover" src="${response.FormUploadedImage}" alt="hotelImage">
               </div>
               <div class="otherDetails cursorHover">
-                  <div class="odTop">
-                      <h2>${listing.data.FormHotelName}</h3>
-                      <h4>${listing.data.FormHotelLocation}</h4>
-                  </div>
-                  <div class="odBottom">
-                      <div class="odBotLeft">
-                          <h4>${listing.data.FormHotelAddress}</h4>
-                      <div class="contactInListing">
-                          <h5>${listing.data.FormContactName}</h5>
-                          <h5>${listing.data.FormContactEmail}</h5>
-                          <h5>${listing.data.FormContactNumber}</h5>
+                  <div class="hotelDetailsHeader">
+                      <div class="hotelDetailsHeaderLeft">
+                          <h2>${response.FormHotelName}</h2>
+                          <div>
+                              <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i> ${response.FormHotelLocation},</span>
+                              <span>${response.FormHotelAddress}</span>
                           </div>
                       </div>
-                  <div class="displayStartingPrice flexCenter cursorHover">
-                      <h4>Starting from: ${listing.data.FormOneNightPrice}</h4>
+                      <div class="hotelDetailsHeaderRight flexCenter">
+                          <i class="fa-solid fa-book-bookmark fa-2xl" style="color: #004021;"></i>
+                      </div>
+                  </div>
+                  <div class="hotelDetailsBottom">
+                      <div class="hotelDetailsBottomLeft">
+                          <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i> ${response.FormContactName}</span>
+                          <div>
+                              <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>   ${response.FormContactEmail}</span>
+                              <span><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>   ${response.FormContactNumber}</span>
+                          </div>
+                      </div>
+                      <div class="hotelDetailsBottomRight">
+                          <div class="displayStartingPrice flexCenter">
+                              Starting from: ${response.FormOneNightPrice} &#8382;
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
-        </div>
     `;
-});
+  });
+
+
+  // `
+  //       <div class="aListing">
+  //             <div class="hotelImg">
+  //               <img id="uploadedImg" class="uploadedListingImg cursorHover" src="${response.FormUploadedImage}" alt="hotelImage">
+  //             </div>
+  //             <div class="otherDetails cursorHover">
+  //                 <div class="odTop">
+  //                     <h2>${response.FormHotelName}</h3>
+  //                     <h4>${response.FormHotelLocation}</h4>
+  //                 </div>
+  //                 <div class="odBottom">
+  //                     <div class="odBotLeft">
+  //                         <h4>${response.FormHotelAddress}</h4>
+  //                     <div class="contactInListing">
+  //                         <h5>${response.FormContactName}</h5>
+  //                         <h5>${response.FormContactEmail}</h5>
+  //                         <h5>${response.FormContactNumber}</h5>
+  //                         </div>
+  //                     </div>
+  //                 <div class="displayStartingPrice flexCenter cursorHover">
+  //                     <h4>Starting from: ${response.FormOneNightPrice}&#8382;</h4>
+  //                 </div>
+  //             </div>
+  //         </div>
+  //       </div>
+  //   `;

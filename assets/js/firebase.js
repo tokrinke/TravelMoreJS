@@ -1,23 +1,34 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyAmZn51k_S8pwynIfFHcNzmEMDt9fBNJ7Q",
+  authDomain: "travelmoredb.firebaseapp.com",
+  projectId: "travelmoredb",
+  databaseURL: "https://travelmoredb-default-rtdb.firebaseio.com/",
+  storageBucket: "travelmoredb.appspot.com",
+  messagingSenderId: "25562550851",
+  appId: "1:25562550851:web:9dd8989f35776940177af6",
+};
+
 // const firebaseConfig = {
-//   apiKey: "AIzaSyAmZn51k_S8pwynIfFHcNzmEMDt9fBNJ7Q",
-//   authDomain: "travelmoredb.firebaseapp.com",
-//   projectId: "travelmoredb",
-//   databaseURL: "https://travelmoredb-default-rtdb.firebaseio.com/",
-//   storageBucket: "travelmoredb.appspot.com",
-//   messagingSenderId: "25562550851",
-//   appId: "1:25562550851:web:9dd8989f35776940177af6",
+//   apiKey: "AIzaSyBEFzxHoT5sSSoOKz2Im5mFHShm5qMrrv8",
+//   authDomain: "travelmoredatabase.firebaseapp.com",
+//   projectId: "travelmoredatabase",
+//   databaseURL: "https://travelmoredatabase-default-rtdb.firebaseio.com/",
+//   storageBucket: "travelmoredatabase.appspot.com",
+//   messagingSenderId: "613369058227",
+//   appId: "1:613369058227:web:1228662bd81bf9a6ba31c6",
+//   measurementId: "G-497SCBHCX9",
 // };
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBEFzxHoT5sSSoOKz2Im5mFHShm5qMrrv8",
-  authDomain: "travelmoredatabase.firebaseapp.com",
-  projectId: "travelmoredatabase",
-  databaseURL: "https://travelmoredatabase-default-rtdb.firebaseio.com/",
-  storageBucket: "travelmoredatabase.appspot.com",
-  messagingSenderId: "613369058227",
-  appId: "1:613369058227:web:1228662bd81bf9a6ba31c6",
-  measurementId: "G-497SCBHCX9",
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAslQPmRrZPIk2UeRHu62LL412TAtQnD8Q",
+//   authDomain: "travelmore-b7907.firebaseapp.com",
+//   projectId: "travelmore-b7907",
+//   databaseURL: "https://travelmore-b7907-default-rtdb.firebaseio.com/",
+//   storageBucket: "travelmore-b7907.appspot.com",
+//   messagingSenderId: "888605172625",
+//   appId: "1:888605172625:web:3596f9de940116f594f030",
+//   measurementId: "G-YKLVQ072GR"
+// };
 
 firebase.initializeApp(firebaseConfig);
 

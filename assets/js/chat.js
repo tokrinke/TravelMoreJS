@@ -51,7 +51,7 @@ function sendMessage() {
     addElementInFirebase("messages", {
       authorID: userToken,
       message: message,
-      fullname: JSON.parse(activeUser).fullname,
+      fullname:JSON.parse(activeUser).name + " " + JSON.parse(activeUser).surname,
       sentAt: new Date().toString(),
     });
   }

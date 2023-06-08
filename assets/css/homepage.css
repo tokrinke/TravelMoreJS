@@ -38,7 +38,7 @@ h2{
     font-family: FigtreeMedium;
 }
 h4{
-    color: #FFF;
+    color: #004021;
     font-family: FigtreeRegular;
 }
 h5{
@@ -168,6 +168,7 @@ h5{
     width: 100vw;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 18px 50px -10px;
+    margin-bottom: 2vh;
 }
 .imgSlider{
     height: 100%;
@@ -260,65 +261,100 @@ h5{
     padding-top: 1vh;
 }
 .aListing{
-    width: 80%;
-    height: 40%;
+    width: 60%;
+    height: 25%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 1vh;
+    transition: 0.6s;
+}
+.aListing:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: 0.8s;
 }
 .hotelImg{
     width: 40%;
-    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.uploadedListingImg{
-    max-width: 100%;
-    max-height: 100%;
+#uploadedImg{
+    width: 100%;
+    min-height: 100%;
     object-fit: cover;
 }
 .otherDetails{
     width: 60%;
-    height: 100%;
+    min-height: 100%;
     background-color: #131313;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding-left: 1vw;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.odTop{
-    width: 100%;
-    height: 50%;
+.otherDetails span{
+    font-family: FigtreeMedium;
+    color: #FFF;
 }
-.odBottom{
+.hotelDetailsHeader{
+    min-height: 20%;
     width: 100%;
-    height: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
 }
-.odBotLeft{
-    
-}
-.contactInListing{
+.hotelDetailsHeaderLeft{
+    height: 100%;
+    width: 80%;
     display: flex;
-    flex-direction: row; 
-    gap: 1vw;
+    flex-direction: column;
+}
+.hotelDetailsHeaderLeft div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2vw;
+}
+.hotelDetailsHeaderLeft span{
+    font-family: FigtreeMedium;
+    color: #004021;
+}
+.hotelDetailsHeaderRight{
+    height: 100%;
+    width: 20%;
+}
+.hotelDetailsBottom{
+    min-height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.hotelDetailsBottomLeft{
+    height: 50%;
+    width: 70%;
+}
+.hotelDetailsBottomLeft h4{
+    color: #fff;
+}
+.hotelDetailsBottomLeft div{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+}
+.hotelDetailsBottomRight{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 .displayStartingPrice{
-    background-color: #00331A;
-    width: 20%;
-    height: 30%;
-    padding-left: 1vh;
-    transition: 0.6s;
-}
-.displayStartingPrice:hover{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 80%;
+    height: 70%;
     background-color: #004021;
-    transition: 0.8s;
+    color: #FFF;
+    font-family: FigtreeMedium;
+    border-radius: 2px;
 }
-
-
-
-
 
 
 
@@ -508,6 +544,7 @@ h5{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 2vh;
 }
 #toContactUsBtn{
     text-decoration: none;

@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelMore • Home</title>
-    <link rel="stylesheet" href="/assets/css/animations.css">
-    <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="stylesheet" href="/assets/css/homepage.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/homepage.css">
 </head>
 <body>
     <header class="hpHeader flexCenter">
@@ -37,7 +37,7 @@
             <div class="hpSearchBgPic">
                 <img class="bgPic bgPic1" src="./assets/images/pexels-grafixartphoto-samir-belhamra-4254614.jpg" alt="hpBg">
             </div>
-            <!-- <div class="hpSearchBgPic hpSearchBgPic2" style="animation: pictureSlideIn 0.4s;">
+            <!-- <div class="hpSeavrchBgPic hpSearchBgPic2" style="animation: pictureSlideIn 0.4s;">
                 <img class="bgPic bgPic2" src="./assets/images/svn.jpg" alt="hpBg2">
             </div>
             <div class="hpSearchBgPic hpSearchBgPic3" style="animation: pictureSlideIn 0.4s;">
@@ -66,21 +66,30 @@
                     <img id="uploadedImg" class="uploadedListingImg cursorHover" src="" alt="hotelImage">
                 </div>
                 <div class="otherDetails cursorHover">
-                    <div class="odTop">
-                        <h2>hotelName</h3>
-                        <h4>hotelLocation</h4>
-                    </div>
-                    <div class="odBottom">
-                        <div class="odBotLeft">
-                            <h4>hotelAddress</h4>
-                            <div class="contactInListing">
-                                <h5>contactName</h5>
-                                <h5>contactEmail</h5>
-                                <h5>contactNumber</h5>
+                    <div class="hotelDetailsHeader">
+                        <div class="hotelDetailsHeaderLeft">
+                            <h2>hotelName</h2>
+                            <div>
+                                <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i> hotelLocation,</span>
+                                <span>hotelAddress</span>
                             </div>
                         </div>
-                        <div class="displayStartingPrice flexCenter cursorHover">
-                            <h4>Starting from: startingPrice</h4>
+                        <div class="hotelDetailsHeaderRight flexCenter">
+                            <i class="fa-solid fa-book-bookmark fa-2xl" style="color: #004021;"></i>
+                        </div>
+                    </div>
+                    <div class="hotelDetailsBottom">
+                        <div class="hotelDetailsBottomLeft">
+                            <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i> hotelierName</span>
+                            <div>
+                                <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>   contactEmail</span>
+                                <span><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>   contactNumber</span>
+                            </div>
+                        </div>
+                        <div class="hotelDetailsBottomRight">
+                            <div class="displayStartingPrice">
+                                Starting from: startingPrice
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -174,7 +183,6 @@
     <script src="./assets/js/firebase.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/chat.js"></script>
-    
     <script src="./assets/js/homepage.js"></script>
     
 </body> 
