@@ -79,30 +79,5 @@ firebase
     `;
   });
 
-
-  // `
-  //       <div class="aListing">
-  //             <div class="hotelImg">
-  //               <img id="uploadedImg" class="uploadedListingImg cursorHover" src="${response.FormUploadedImage}" alt="hotelImage">
-  //             </div>
-  //             <div class="otherDetails cursorHover">
-  //                 <div class="odTop">
-  //                     <h2>${response.FormHotelName}</h3>
-  //                     <h4>${response.FormHotelLocation}</h4>
-  //                 </div>
-  //                 <div class="odBottom">
-  //                     <div class="odBotLeft">
-  //                         <h4>${response.FormHotelAddress}</h4>
-  //                     <div class="contactInListing">
-  //                         <h5>${response.FormContactName}</h5>
-  //                         <h5>${response.FormContactEmail}</h5>
-  //                         <h5>${response.FormContactNumber}</h5>
-  //                         </div>
-  //                     </div>
-  //                 <div class="displayStartingPrice flexCenter cursorHover">
-  //                     <h4>Starting from: ${response.FormOneNightPrice}&#8382;</h4>
-  //                 </div>
-  //             </div>
-  //         </div>
-  //       </div>
-  //   `;
+// search
+const listingsRef = firebase.database().ref("listings");

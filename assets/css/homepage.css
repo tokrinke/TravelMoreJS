@@ -348,7 +348,7 @@ h5{
     justify-content: flex-end;
 }
 .displayStartingPrice{
-    width: 80%;
+    min-width: 80%;
     height: 70%;
     background-color: #004021;
     color: #FFF;

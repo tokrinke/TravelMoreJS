@@ -266,22 +266,64 @@ input::file-selector-button{
     justify-content: flex-start;
     flex-direction: column;
     overflow-y: scroll;
-    gap: 1vh;
+    gap: 2vh;
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
 .listingTemplate{
     min-height: 40%;
     width: 90%;
-    background-color: #196A43;
+    gap: 1vh;
     margin-left: 1vw;
     display: flex;
-    flex-direction: row;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    flex-direction: column;
+    
 }
-.listingDetails{
+.listingTemplateDiv{
+    display: flex;
+    flex-direction:row;
+    background-color: #131313;
+    transition: 0.6s;
+}
+.listingTemplateDiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: 0.8s;
+}
+.listingTemplateInfo{
     height: 100%;
     width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    color: #FFF;
+    font-family: FigtreeMedium;
+}
+.listingTemplateInfo span{
+    color: #004021;
+    font-family: FigtreeMedium;
+}
+.listingTemplateInfo div{
+    display: flex;
+    flex-direction: row;
+}
+.listingTemplateImage{
+    width: 30%;
+    min-height: 100%;
+    background-color: #fff;
+}
+#listingImg{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.listingInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    width: 55%;
+    height: 100%;
 }
 .removeListing{
     height: 100%;

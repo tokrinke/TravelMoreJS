@@ -78,29 +78,48 @@ saveChangesBtn.addEventListener("click", () => {
   }
 });
 // remove listing
+const removeListingBtn = document.querySelector(".removeListingBtn");
+const userId = sessionStorage.getItem("userToken");
+const displayUsersListings = document.querySelector(".listingTemplate");
+const listingsRef = firebase.database().ref("listings");
 
-// reflect active user
-// const userFullnameDisplay = document.querySelector("#userFullname");
-// const userCreatedAt = document.querySelector("#userRegDate");
-// let activeUserDetails = getElementFromFirebase("user", `${userToken}`);
-// const updatedFirebaseDataBase = getArrayFromFirebase("user");
-// updatedFirebaseDataBase.forEach((user) => {
-//   if (user.data.userToken === userToken) {
-//     activeUserDetails = user;
-//     return;
-//   }
-// });
-// console.log(activeUserDetails);
+document.addEventListener("DOMContentLoaded", () => {
+  listingsRef.on("child_added", (snapshot) => {
+    const listingData = snapshot.val();
+    console.log(listingsRef);
+    if (listingData.uploadedBy === userId) {
+      displayUsersListings.innerHTML += `
+        <div class="listingTemplateDiv">
+          <div class="listingTemplateImage">
+            <img id="listingImg" class="uploadedListingImgSettings cursorHover" src="${listingData.FormUploadedImage}" alt="listingImage">
+          </div>
+          <div class="listingTemplateInfo">
+            <h3>${listingData.FormHotelName}</h3>
+            <span>${listingData.FormHotelLocation}, ${listingData.FormHotelAddress}</span>
+          </div>
+          <div class="removeListing flexCenter cursorHover">
+            <button class="removeListingBtn cursorHover" onclick="removeAListing('${snapshot.key}')"><i class="fa-solid fa-trash fa-2xl" style="color: #ffffff;"></i></button>
+          </div>
+        </div>
+      `;
+    }
+  });
+});
 
-// if(userToken && activeUser){
-//   userFullnameDisplay.innerHTML = JSON.stringify({
-//     name: activeUserDetails.data.name,
-//     surname: activeUserDetails.data.surname
-//   })
-//   // userFullnameDisplay.innerHTML = `Hello, ${activeUserDetails.data.name + " " + activeUserDetails.data.surname}`;
-// }
+function removeAListing(id) {
+  setTimeout(() => {
+    removeElementFromFirebase("listings", id);
+    displayAlert("Success", "Listing removed successfully", "success");
+    location.href = "/settings.html";
+  }, 2000);
+}
 
-// if(userToken && activeUser){
+//reflect active user name and surname
+const userFullnameDisplay = document.querySelector("#userFullname");
+const userCreatedAt = document.querySelector("#userRegDate");
+const activeUserName = sessionStorage.getItem("activeUserInfo");
+const parsedUserName = JSON.parse(activeUserName);
+const justName = parsedUserName.name;
+const justSurame = parsedUserName.surname;
 
-//   // userCreatedAt.innerHTML = `Member since: ${(activeUser).createdAt}`;
-// }
+userFullnameDisplay.innerHTML = `Hello, ${justName}` + " " + `${justSurame}`;

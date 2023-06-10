@@ -52,12 +52,12 @@ createListingBtn.addEventListener("click", () => {
     FormContactName &&
     FormContactEmail &&
     FormContactNumber &&
-    FormUploadedImage
+    FormUploadedImage 
   ) {
     createListingBtn.disabled = true;
     addElementInFirebase("listings", {
       FormHotelName,
-      FormHotelLocation,
+      FormHotelLocation,  
       FormHotelAddress,
       FormOneNightPrice,
       FormOneWeekPrice,
