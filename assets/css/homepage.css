@@ -418,13 +418,26 @@ h5{
     padding-left: 1vw;
     padding-right: 1vw;
 }
-
+.chatBoxTop div{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
 .chatBoxMid{
     height: 78%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(2, 2, 3, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    position: relative;
+}
+.upDown{
+    position: absolute;
+    left: 1;
+    top: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
 }
 .chatBoxMsgs{
     height: 95%;
@@ -433,13 +446,14 @@ h5{
     font-family: FigtreeMedium;
     display: flex;
     flex-wrap: wrap;
-    gap: 2vh;
+    gap: 3vh;
 }
 .chatBoxMsgs::-webkit-scrollbar{
     display: none;
 }
 .msgBlock{
     gap: 1vh;
+    max-height: 20%;
     width: 100%;
     display: flex;
     color: #FFF;
@@ -448,6 +462,7 @@ h5{
 .sentByUserMsgBlock{
     background-color: transparent;
     gap: 1vh;
+    max-height: 20%;
     width: 100%;
     color: #FFF;
     display: flex;
@@ -467,6 +482,7 @@ h5{
     width: 55%;
     height: 100%;
     background-color: #131313;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -499,14 +515,37 @@ h5{
     width: 10%;
     height: 90%;
 }
-
 .aboveMsg{
     height: 10%;
     width: 55%;
+    font-size: 1vh;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+}
+.sentByUseraboveMsg{
+    height: 10%;
+    width: 55%;
+    font-size: 1vh;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
 }
 .msgDate{
     height: 10%;
     width: 55%;
+    font-size: 0.7em;
+    color: #004021;
+    display: flex;
+    justify-content: flex-start;
+}
+.sentByUsermsgDate{
+    height: 10%;
+    width: 55%;
+    font-size: 0.7em;
+    color: #004021;
+    display: flex;
+    justify-content: flex-end;
 }
 
 

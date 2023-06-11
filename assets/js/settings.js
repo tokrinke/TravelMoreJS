@@ -26,8 +26,7 @@ const repeatPass = document.querySelector("#repeatpassword");
 const userEmail = document.querySelector("#email");
 const userNumber = document.querySelector("#number");
 const displaysProfilePic = document.querySelector("#displaysProfilePic");
-const placeholderPfp =
-  "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
+const placeholderPfp = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
 const pfp = document.querySelector(".profilePic");
 const uploadPfpBtn = document.querySelector("#uploadPfpBtn");
 
@@ -47,34 +46,38 @@ uploadPfpBtn.addEventListener("change", () => {
 
 // save changes
 function clearSettingsInputs() {
-  userName = "";
-  userSurname = "";
-  userPassword = "";
-  repeatPass = "";
-  userEmail = "";
-  userNumber = "";
+  userName.value = "";
+  userSurname.value = "";
+  userPassword.value = "";
+  repeatPass.value = "";
+  userEmail.value = "";
+  userNumber.value   = "";
 }
 const saveChangesBtn = document.querySelector("#saveChangesBtn");
 
 saveChangesBtn.addEventListener("click", () => {
   let uploadedPfp = document.querySelector(".profilePic").src;
-  if (userPassword.value == repeatPass.value) {
-    updateElementInFirebase("user", `${userToken}`, {
-      name: userName.value,
-      surname: userSurname.value,
-      password: userPassword.value,
-      email: userEmail.value,
-      number: userNumber.value,
-      pfp: uploadedPfp,
-    });
-    clearSettingsInputs();
-    displayAlert("Success", "Details updated successfully", "success");
+  if(userName.value && userSurname.value && userPassword.value && userNumber.value && userEmail.value && pfp ){
+    if (userPassword.value == repeatPass.value) {
+      updateElementInFirebase("user", `${userToken}`, {
+        name: userName.value,
+        surname: userSurname.value,
+        password: userPassword.value,
+        email: userEmail.value,
+        number: userNumber.value,
+        pfp: uploadedPfp,
+      });
+      clearSettingsInputs();
+      displayAlert("Success", "Details updated successfully", "success");
+    } else {
+      displayAlert(
+        "Error",
+        "Make sure that the new password and the repeated password match",
+        "error"
+      );
+    }
   } else {
-    displayAlert(
-      "Error",
-      "Make sure that the new password and the repeated password match",
-      "error"
-    );
+    displayAlert("Error", "Please fill in all fields", "error");
   }
 });
 // remove listing
@@ -87,7 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
   listingsRef.on("child_added", (snapshot) => {
     const listingData = snapshot.val();
     console.log(listingsRef);
-    if (listingData.uploadedBy === userId) {
+    if (
+      listingData.uploadedBy === userId ||
+      userId === "7d2cb77a-2323-4774-8980-1d1ebbe11f70"
+    ) {
       displayUsersListings.innerHTML += `
         <div class="listingTemplateDiv">
           <div class="listingTemplateImage">
@@ -116,10 +122,35 @@ function removeAListing(id) {
 
 //reflect active user name and surname
 const userFullnameDisplay = document.querySelector("#userFullname");
-const userCreatedAt = document.querySelector("#userRegDate");
 const activeUserName = sessionStorage.getItem("activeUserInfo");
 const parsedUserName = JSON.parse(activeUserName);
 const justName = parsedUserName.name;
 const justSurame = parsedUserName.surname;
 
 userFullnameDisplay.innerHTML = `Hello, ${justName}` + " " + `${justSurame}`;
+
+// active user pfp
+const UserToken = sessionStorage.getItem("userToken");
+const activeUserInRef = firebase.database().ref(`user/${UserToken}`);
+
+pfp.src = placeholderPfp;
+
+
+//reflect active user reg date
+const userCreatedAt = document.querySelector("#userRegDate");
+
+activeUserInRef.on("value", (snapshot) => {
+  const userData = snapshot.val();
+  if (userData) {
+    const userCreatedAtDate = userData.createdAt;
+    userCreatedAt.innerHTML = `Member Since: ${userCreatedAtDate.split(" ").splice(0, 5).join(" ")}`;
+  }
+});
+
+// activeUserInRef.on("value", (snapshot) => {
+//   const userData = snapshot.val();
+//   if (userData) {
+//     const userCreatedAtDate = userData.createdAt;
+//     userCreatedAt.innerHTML = `Member Since: ${userCreatedAtDate.split(" ").splice(0, 5).join(" "))}`
+//   }
+// });

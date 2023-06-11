@@ -82,8 +82,9 @@ function getElementFromFirebase(REF, id) {
 }
 
 function updateElementInFirebase(REF, id, data) {
-  firebase.database().ref(`${REF}/${id}`).set(data);
+  firebase.database().ref(`${REF}/${id}`).update(data);
 }
+
 
 function removeElementFromFirebase(REF, id) {
   firebase.database().ref(`${REF}/${id}`).remove();

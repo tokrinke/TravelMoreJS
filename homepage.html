@@ -55,7 +55,7 @@
                 Search for hotels in Georgia
             </div>
             <div class="searchBar cursorHover">
-                <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+                <i id="searchBtn" class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
                 <input class="inputSearch" type="text" placeholder="Enter hotel name ">
             </div>
         </div>
@@ -116,13 +116,18 @@
     <div class="chatBox">
         <div class="chatBoxHead chatBoxTop">
             What can we help you with?
-            <div class="closeChat ">
-                <i class="fa-solid fa-xmark fa-xl cursorHover" style="color: #ffffff;" onclick="closeChat()"></i>
+            <div class="flexCenter">
+                <div class="clearChat">
+                    <i class="fa-solid fa-eraser fa-lg cursorHover" style="color: #ffffff;"onclick="clearChat()"></i>
+                </div>
+                <div class="closeChat ">
+                    <i class="fa-solid fa-xmark fa-xl cursorHover" style="color: #ffffff;" onclick="closeChat()"></i>
+                </div>
             </div>
         </div>
         <div class="chatBoxMid flexCenter">
             <div class="chatBoxMsgs" id="displayMsgs">
-                <div class="msgBlock">
+                <!-- <div class="msgBlock">
                     <div class="aboveMsg">
                         admin
                     </div>  
@@ -165,7 +170,7 @@
                     <div class="msgDate">
                         00-00-00
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="chatBoxTypeMsg chatBoxBot flexCenter">
