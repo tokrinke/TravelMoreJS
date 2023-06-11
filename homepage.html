@@ -17,15 +17,13 @@
         <div class="hpHeaderRight flexCenter">
             <a href="./listproperty.html" class="cursorHover">List your property</a>
             <a href="./aboutus.html" class="cursorHover">About us</a>
-            <div class="flexCenter uimDiv">
-                <div class="hpUserIcon appear">
-                    <i class="fa-solid fa-circle-user fa-2xl cursorHover" id="userIcon" style="color: #FFF;"></i>
-                </div>
-                <div class="userIconMenu appear flexCenter">
-                    <div class="stgdiv flexCenter cursorHover">
-                        <a href="./settings.html" class="cursorHover"><button class="toSettings flexCenter">Settings</button></a>
+            <div class="dropdown" id="dataDropdown">
+                <button class="userIconButton" id="dataDropdownButton"><i class="hpUserIcon appear fa-solid fa-circle-user fa-2xl cursorHover" id="userIcon" style="color: #FFF;"></i></button>
+                <div class="dropdownMenu">
+                    <div class="dropdownToSettings flexCenter cursorHover">
+                        <a href="./settings.html" ><button class="toSettings cursorHover flexCenter">Settings</button></a>
                     </div>
-                    <div class="lodiv flexCenter cursorHover">
+                    <div class="dropdownToLogOut flexCenter cursorHover">
                         <p><button class="logOutBtn cursorHover" onclick="logOut()">Log out</button></p>
                     </div>
                 </div>
@@ -37,18 +35,6 @@
             <div class="hpSearchBgPic">
                 <img class="bgPic bgPic1" src="./assets/images/pexels-grafixartphoto-samir-belhamra-4254614.jpg" alt="hpBg">
             </div>
-            <!-- <div class="hpSeavrchBgPic hpSearchBgPic2" style="animation: pictureSlideIn 0.4s;">
-                <img class="bgPic bgPic2" src="./assets/images/svn.jpg" alt="hpBg2">
-            </div>
-            <div class="hpSearchBgPic hpSearchBgPic3" style="animation: pictureSlideIn 0.4s;">
-                <img class="bgPic bgPic3" src="./assets/images/mountainHouse.jpg" alt="hpBg3">
-            </div>
-            <div class="hpSearchBgPic hpSearchBgPic4" style="animation: pictureSlideIn 0.4s;">
-                <img class="bgPic bgPic4" src="./assets/images/tbilisiM.jpg" alt="hpBg4">
-            </div>
-            <div class="hpSearchBgPic hpSearchBgPic5" style="animation: pictureSlideIn 0.4s;">
-                <img class="bgPic bgPic5" src="./assets/images/sofeli.jpg" alt="hpBg5">
-            </div> -->
         </div>
         <div class="searchDiv flexCenter">
             <div class="aboveSearchContent">
@@ -61,44 +47,11 @@
         </div>
     </div>
     <section id="listingsSection" class="mainSection">
-            <!-- <div class="aListing">
-                <div class="hotelImg">
-                    <img id="uploadedImg" class="uploadedListingImg cursorHover" src="" alt="hotelImage">
-                </div>
-                <div class="otherDetails cursorHover">
-                    <div class="hotelDetailsHeader">
-                        <div class="hotelDetailsHeaderLeft">
-                            <h2>hotelName</h2>
-                            <div>
-                                <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i> hotelLocation,</span>
-                                <span>hotelAddress</span>
-                            </div>
-                        </div>
-                        <div class="hotelDetailsHeaderRight flexCenter">
-                            <i class="fa-solid fa-book-bookmark fa-2xl" style="color: #004021;"></i>
-                        </div>
-                    </div>
-                    <div class="hotelDetailsBottom">
-                        <div class="hotelDetailsBottomLeft">
-                            <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i> hotelierName</span>
-                            <div>
-                                <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>   contactEmail</span>
-                                <span><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>   contactNumber</span>
-                            </div>
-                        </div>
-                        <div class="hotelDetailsBottomRight">
-                            <div class="displayStartingPrice">
-                                Starting from: startingPrice
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
     </section>
     <footer class="hpFooter">
         <div class="newsletter">
             <p>Subscribe to our newsletter and we will send you the best deals.</p>
-            <!-- <input class="bigInput" type="email" placeholder="Your email address"> -->
         </div>
         <button class="defaultBtn cursorHover subBtn">Subscribe</button>
         <div class="socials">
@@ -127,50 +80,7 @@
         </div>
         <div class="chatBoxMid flexCenter">
             <div class="chatBoxMsgs" id="displayMsgs">
-                <!-- <div class="msgBlock">
-                    <div class="aboveMsg">
-                        admin
-                    </div>  
-                    <div class="msgContent">
-                        incomingMsg
-                    </div>
-                    <div class="msgDate">
-                        00-00-00
-                    </div>
-                </div>
-                <div class="sentByUserMsgBlock">
-                    <div class="aboveMsg">
-                        userFullname
-                    </div>  
-                    <div class="sentByUsermsgContent">
-                        outgoingMsg
-                    </div>
-                    <div class="msgDate">
-                        00-00-00
-                    </div>
-                </div>
-                <div class="msgBlock">
-                    <div class="aboveMsg">
-                        admin
-                    </div>  
-                    <div class="msgContent">
-                        incomingMsg
-                    </div>
-                    <div class="msgDate">
-                        00-00-00
-                    </div>
-                </div>
-                <div class="sentByUserMsgBlock">
-                    <div class="aboveMsg">
-                        userFullname
-                    </div>  
-                    <div class="sentByUsermsgContent">
-                        outgoingMsg
-                    </div>
-                    <div class="msgDate">
-                        00-00-00
-                    </div>
-                </div> -->
+                
             </div>
         </div>
         <div class="chatBoxTypeMsg chatBoxBot flexCenter">
@@ -189,6 +99,5 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/chat.js"></script>
     <script src="./assets/js/homepage.js"></script>
-    
 </body> 
 </html>

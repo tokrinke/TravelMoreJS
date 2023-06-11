@@ -35,3 +35,24 @@ function logOut() {
 function displayAlert(title, text, icon) {
   Swal.fire({ title, text, icon });
 }
+
+// Log out
+
+const userIcon = document.querySelector("#userIcon");
+const logOutBtn = document.querySelector(".logOutBtn");
+const dataDropdownButton = document.querySelector("#dataDropdownButton");
+
+dataDropdownButton.addEventListener("click", x => {
+  if (!dataDropdownButton && x.target.closest("#dataDropdown") != null) return;
+
+  let dropdown;
+  if (dataDropdownButton) {
+    dropdown = x.target.closest("#dataDropdown");
+    dropdown.classList.toggle("active");
+  }
+
+  document.querySelectorAll("#dataDropdown.active").forEach((otherDropdown) => {
+    if (otherDropdown === dropdown) return;
+    dropdown.classList.remove("active");
+  });
+});

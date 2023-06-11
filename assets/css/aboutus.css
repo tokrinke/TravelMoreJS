@@ -64,6 +64,56 @@ body{
     text-decoration: none;
     color: #fff;
 }
+.dropdown{
+    position: relative;
+}
+.userIconButton{
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.dropdownMenu{
+    position: absolute;
+    z-index: 1;
+    left: calc(100% - 2vw);
+    top: calc(100% + 1vh);
+    opacity: 0;
+    background-color: #131313;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown.active > .userIconButton + .dropdownMenu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.toSettings{
+    color: #FFF;
+    padding-top: 1vh;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.logOutBtn{
+    color: #FFF; 
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+}
+
+
+
 .aboutUsInfo{
     width: 100vw;
     min-height: 50vh;

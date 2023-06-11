@@ -92,20 +92,30 @@ h5{
     text-decoration: none;
     color: #fff;
 }
-.uimDiv{
-    flex-direction: column;
-    padding-top: 8vh;
+.dropdown{
+    position: relative;
 }
-.userIconMenu{
-    z-index: 2;
-    display: none;
-    flex-direction: column;
-    max-height: 14vh;
-    width: 5vw;
+.userIconButton{
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.dropdownMenu{
+    position: absolute;
+    z-index: 1;
+    left: calc(100% - 2vw);
+    top: calc(100% + 1vh);
+    opacity: 0;
     background-color: #131313;
-    border-radius: 2px;
-    justify-content: space-around;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown.active > .userIconButton + .dropdownMenu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 .toSettings{
     color: #FFF;
@@ -118,18 +128,7 @@ h5{
     border: none;
     background-color: transparent;
 }
-.stgdiv{
-    width: 100%;
-    transition: 0.6s;
-}
-.stgdiv:hover{
-    transition: 0.8s;
-    background-color: #191919;
-    cursor: pointer;
-}
-.toSettings:hover{
-    cursor: pointer;
-}
+
 .logOutBtn{
     color: #FFF; 
     text-decoration: none;
@@ -140,16 +139,7 @@ h5{
     font-weight: 600;
     font-size: 1.5vh;
 }
-.lodiv{
-    width: 100%;
-    min-height: 50%;
-    transition: 0.6s;
-}
-.lodiv:hover{
-    transition: 0.8s;
-    background-color: #191919;
-    cursor: pointer;
-}
+
 .logOutBtn:hover{
     cursor: pointer;
 }
@@ -266,6 +256,7 @@ h5{
     display: flex;
     flex-direction: row;
     margin-bottom: 1vh;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     transition: 0.6s;
 }
 .aListing:hover{
@@ -275,13 +266,40 @@ h5{
 .hotelImg{
     width: 40%;
     min-height: 100%;
+    position: relative;
     object-fit: cover;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    color: #FFF;
 }
 #uploadedImg{
     width: 100%;
     min-height: 100%;
     object-fit: cover;
+}
+.bookNowBtn{
+    position: absolute;
+    color: transparent;
+    font-family: FigtreeMedium;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 3vh;
+    transition: 0.6s;
+}
+.bookNowBtn:hover{
+    color: #FFF;
+    backdrop-filter: brightness(0.4);
+    transition: 0.8s;
+}
+.bookNowBtn a{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: transparent;
+    transition: 0.6s;
+}
+.bookNowBtn a:hover{
+    color: #FFF;
+    transition: 0.8s;
 }
 .otherDetails{
     width: 60%;
@@ -291,7 +309,7 @@ h5{
     flex-direction: column;
     justify-content: space-between;
     padding-left: 1vw;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
 }
 .otherDetails span{
     font-family: FigtreeMedium;

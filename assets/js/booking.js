@@ -1,0 +1,87 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const hotelId = urlParams.get("hotelId");
+
+  const displayChosenHotelInfo = document.querySelector(".bookingMainSection");
+
+  firebase
+    .database()
+    .ref("listings")
+    .child(hotelId)
+    .once("value", (snapshot) => {
+      const response = snapshot.val();
+      const oneNightPrice = response.FormOneNightPrice;
+
+      displayChosenHotelInfo.innerHTML = `
+    <div class="bookingWindow">
+        <input type="hidden" id="selectedHotelId" name="hotelId">
+            <div class="bookingWindowLeft">
+                <div class="displayChosenHotelImg">
+                    <img id="chosenHotelImg" src="${response.FormUploadedImage}" alt="chosenHotelImg">
+                </div>
+                <div class="chosenHotelDetails">
+                    <div class="chosenHotelDetailsTop">
+                        <h3>${response.FormHotelName}</h3>
+                        <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i>${response.FormHotelLocation}, ${response.FormHotelAddress}</span>
+                    </div>
+                    <div class="chosenHotelDetailsTopBottom">
+                        <p class="bio"> • Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque deleniti veritatis facilis quis perferendis nemo vitae iusto animi saepe dolores eaque fuga illo facere debitis doloremque reiciendis, aut ad accusantium.</p>
+                        <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i>${response.FormContactName}</span>
+                        <div>
+                            <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>${response.FormContactEmail}</span>
+                            <span><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>${response.FormContactNumber}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bookingWindowRight">
+                <div class="bookingWindowRightTop">
+                    <div class="chosenHotelPrices flexCenter">
+                        <div>
+                            <label for="oneNightPrice" class="oneNightPriceLabel pricesLabel">1 day:</label>
+                            <span id="oneNightPrice" class="prices" style="color: #FFF;">${response.FormOneNightPrice} &#8382;</span>
+                        </div>
+                        <div>
+                            <label for="oneWeekPrice" class="oneWeekPriceLabel pricesLabel">7 days:</label>
+                            <span id="oneWeekPrice" class="prices" style="color: #FFF;">${response.FormOneWeekPrice} &#8382;</span>
+                        </div>
+                        <div>  
+                            <label for="oneMonthPrice" class="oneMonthPriceLabel pricesLabel">30 days:</label>
+                            <span id="oneMonthPrice" class="prices" style="color: #FFF;">${response.FormOneMonthPrice} &#8382;</span>
+                        </div>
+                    </div>
+                    <div class="amountOfNights flexCenter">
+                        <div>
+                            <label for="inputDesiredDays" class="inputDesiredDaysLabel">How many nights are you staying?</label>
+                            <input id="inputDesiredDays" type="number" placeholder="For example: 7">
+                        </div>
+                        <div>
+                            <label for="priceOutput" class="priceOutputLabel">Total:</label>
+                            <span id="priceOutput"> &#8382;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookingWindowSplitter flexCenter">
+                    <h3>Choose payment method</h3>
+                </div>
+                <div class="bookingWindowRightBottom">
+                    <div class="bog cursorHover">
+                        <img id="bogIcon" src="./assets/images/bog_fin-01.png" alt="bog">
+                    </div>
+                    <div class="tbc cursorHover">
+                        <img id="tbcIcon" src="./assets/images/tbc-share-image.jpg" alt="tbc">
+                    </div>
+                </div>
+            </div>
+    </div>
+`;
+    });
+  const inputDesiredDays = document.querySelector("#inputDesiredDays");
+  const priceOutput = document.querySelector("#priceOutput");
+  inputDesiredDays.addEventListener("input", () => {
+    const desiredDays = inputDesiredDays.value;
+    const totalPrice = desiredDays * oneNightPrice;
+    priceOutput.textContent = totalPrice + " &#8382;";
+  });
+});

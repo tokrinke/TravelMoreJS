@@ -1,0 +1,335 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.cursorHover{
+    cursor: pointer;
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.appear{
+    animation: Appear 1.7s;
+}
+.bookingHeader{
+    justify-content: space-between;
+    flex-direction: row;
+    height: 8vh;
+    width: 100vw;
+    background-color: #131313;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.bookingHeaderLeft{
+    color: #FFF;
+    font-family: FigtreeMedium;
+    font-size: 3.5vh;
+    width: 20%;
+    height: 100%;
+}
+.bookingHeaderRight{
+    width: 40%;
+    height: 100%;
+    flex-direction: row;
+    gap: 2vh;
+    color: #FFF;
+    font-family: FigtreeRegular;
+}
+.bookingHeaderRight a{
+    text-decoration: none;
+    color: #fff;
+}
+.dropdown{
+    position: relative;
+}
+.userIconButton{
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.dropdownMenu{
+    position: absolute;
+    z-index: 1;
+    left: calc(100% - 2vw);
+    top: calc(100% + 1vh);
+    opacity: 0;
+    background-color: #131313;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown.active > .userIconButton + .dropdownMenu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.toSettings{
+    color: #FFF;
+    padding-top: 1vh;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.logOutBtn{
+    color: #FFF; 
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+}
+.bookingMainSection{
+    height: 82vh;
+    max-width: 100vw;
+}
+.bookingWindow{
+    height: 95%;
+    width: 70%;
+    background-color: #131313;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+.bookingWindowLeft{
+    width: 40%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.displayChosenHotelImg{
+    width: 80%;
+    height: 30%;
+    
+    margin: auto;
+}
+#chosenHotelImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.chosenHotelDetails{
+    width: 100%;
+    height: 70%;
+    padding: 1vw;
+}
+.chosenHotelDetailsTop{
+    height: 20%;
+    width: 100%;
+}
+.chosenHotelDetailsTop h3{
+    font-family: FigtreeMedium;
+    color: #FFF;
+}
+.chosenHotelDetailsTop span{
+    font-family: FigtreeMedium;
+    color: #004021;
+}
+.chosenHotelDetailsTopBottom{
+    height: 80%;
+    width: 100%;
+}
+.bio{
+    font-family: FigtreeMedium;
+    color: #FFF;
+    min-height: 50%;
+    width: 80%;
+}
+.chosenHotelDetailsTopBottom span{
+    font-family: FigtreeMedium;
+    color: #FFF;
+    margin-bottom: 1vh;
+}
+.chosenHotelDetailsTopBottom div span{
+    font-family: FigtreeMedium;
+    color: #004021;
+   
+}
+.bookingWindowRight{
+    width: 60%;
+    height: 100%;
+    
+}
+.bookingWindowRightTop{
+    height: 55%;
+    width: 100%;
+}
+.chosenHotelPrices{
+    height: 70%;
+    width: 100%;
+    gap: 2vw;
+}
+.chosenHotelPrices span{
+    display: flex;
+    align-items: center;
+    height: 4.2vh;
+    width: 8vw;
+    padding-left: 0.5vw;
+    background-color: #131313;
+    color: #196A43;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    transition: 0.6s;
+}
+.prices{
+    display: flex;
+    align-content: center;
+    height: 4.2vh;
+    width: 12vw;
+    padding-left: 0.5vw;
+    background-color: #131313;
+    font-family: FigtreeMedium;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    transition: 0.6s;
+}
+.prices:hover{
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.pricesLabel{
+    color: #004021;
+    font-family: FigtreeMedium;
+}
+
+
+.amountOfNights{
+    height: 30%;
+    width: 100%;
+    gap: 1vw;
+}
+#inputDesiredDays{
+    display: flex;
+    align-content: center;
+    height: 4.2vh;
+    width: 12vw;
+    padding-left: 0.5vw;
+    background-color: #131313;
+    color: #FFF;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    transition: 0.6s;
+}
+#inputDesiredDays:hover{
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#inputDesiredDays::placeholder{
+    color: #196A43;
+    font-family: FigtreeMedium;
+}
+.amountOfNights div{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin: 0;
+}
+#priceOutput{
+    display: flex;
+    align-items: center;
+    height: 4.2vh;
+    width: 7vw;
+    padding-left: 0.5vw;
+    background-color: #004021;
+    color: #FFF;
+    font-family: FigtreeMedium;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    transition: 0.6s;
+}
+#priceOutput:hover{
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.inputDesiredDaysLabel{
+    color: #FFF;
+    font-family: FigtreeMedium;
+}
+.priceOutputLabel{
+    color: #004021;
+    font-family: FigtreeMedium;
+}
+
+
+
+.bookingWindowSplitter{
+    height: 10%;
+    width: 100%;
+    font-family: FigtreeMedium;
+    color: #004021;
+    font-size: 2vh;
+    margin: 0;
+}
+.bookingWindowRightBottom{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.bog{
+    width: 50%;
+    height: 100%;
+    transition: 0.6s;
+}
+.bog:hover{
+    filter: brightness(0.7);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.8s;
+}
+#bogIcon{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.tbc{
+    width: 50%;
+    height: 100%;
+    transition: 0.6s;
+}
+.tbc:hover{
+    filter: brightness(0.7);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.8s;
+}
+#tbcIcon{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bookingFooter{
+    height: 10vh;
+    gap: 1vh;
+    max-width: 100vw;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: FigtreeMedium;
+    font-size: 1.72vh;
+}
+.socials{
+    display: flex;
+    gap: 2vw;
+}
