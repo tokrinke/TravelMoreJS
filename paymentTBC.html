@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMore • Pay</title>
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/paymentTBC.css">
+</head>
+<body>
+    <header class="paymentHeader flexCenter">
+        <div class="paymentHeaderLeft flexCenter">
+            TravelMore
+        </div>
+        <div class="paymentHeaderRight flexCenter">
+            <a href="./homepage.html" class="cursorHover">Go back</a>
+        </div>
+    </header>
+    <section class="paymentSection flexCenter">
+        <div class="paymentFormTBC">
+            <div class="paymentFormTopTBC">
+                <img id="paymentFormImgTBC" src="./assets/images/tbc-share-image.jpg" alt="bankOfGeorgiaLogo">
+                <span id="toPay">To pay:${} ₾</span>
+            </div>
+            <div class="paymentFormBody flexCenter">
+                <div class="nameOnCard inputDivs">
+                    <label class="paymentInputsLabelTBC" for="nameOnCard">Name On Card:</label>
+                    <input class="paymentInputs" id="nameOnCard" type="text" placeholder="ex. George Brown">   
+                </div>
+                <div class="cardNumber inputDivs">
+                    <label class="paymentInputsLabelTBC" for="cardNumber">Card Number:</label>
+                    <input class="paymentInputs" id="cardNumber" type="number" placeholder="4242 4242 4242 4242">   
+                </div>
+                <div class="payersEmail inputDivs">
+                    <label class="paymentInputsLabelTBC" for="payersEmail">Billing Address:</label>
+                    <input class="paymentInputs" id="payersEmail" type="email" placeholder="Your email">   
+                </div>
+                <div class="lastDetails">
+                    <div class="cvc inputDivs">
+                        <label class="paymentInputsLabelTBC" for="cvc">CVC</label>
+                        <input class="paymentInputsSmall" id="cvc" type="number" placeholder="ex. 999">
+                    </div>
+                    <div class="expirations">
+                        <div class="monthOnCard inputDivs">
+                            <label class="paymentInputsLabelTBC" for="monthOnCard">Expiration Month</label>
+                            <input class="paymentInputsSmall expirationsInput" id="monthOnCard" type="number" placeholder="MM">  
+                        </div>
+                        <div class="yearOnCard inputDivs">
+                            <label class="paymentInputsLabelTBC" for="yearOnCard">Expiration Year</label>
+                            <input class="paymentInputsSmall expirationsInput" id="yearOnCard" type="number" placeholder="YYYY">  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paymentFormFooter flexCenter">
+                <button id="pay" class="payWithTBC cursorHover">Pay &#xbb;</button>
+            </div>
+        </div>
+    </section>
+    <footer class="flexCenter">
+        <p>"Bank of Georgia" and "TBC Bank" are just payment service providers for TravelMore, 
+            any issues with payments are handled by them.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/5daa8eb347.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/firebase.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/booking.js"></script>
+    <script src="./assets/js/payment.js"></script>
+</body>
+</html>
