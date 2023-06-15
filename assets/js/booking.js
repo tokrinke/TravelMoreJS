@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const displayChosenHotelInfo = document.querySelector(".bookingMainSection");
 
+
   firebase
     .database()
     .ref("listings")
@@ -23,14 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="chosenHotelDetails">
                     <div class="chosenHotelDetailsTop">
                         <h3>${response.FormHotelName}</h3>
-                        <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i>${response.FormHotelLocation}, ${response.FormHotelAddress}</span>
+                        <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i>  ${response.FormHotelLocation}, ${response.FormHotelAddress}</span>
                     </div>
                     <div class="chosenHotelDetailsTopBottom">
                         <p class="bio"> • Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque deleniti veritatis facilis quis perferendis nemo vitae iusto animi saepe dolores eaque fuga illo facere debitis doloremque reiciendis, aut ad accusantium.</p>
-                        <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i>${response.FormContactName}</span>
+                        <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i>  ${response.FormContactName}</span>
                         <div>
-                            <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>${response.FormContactEmail}</span>
-                            <span><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>${response.FormContactNumber}</span>
+                            <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>  ${response.FormContactEmail}</span>
+                            <span><i class="fa-solid fa-phone fa-sm" style="color: #ffffff;"></i>  ${response.FormContactNumber}</span>
                         </div>
                     </div>
                 </div>
@@ -38,22 +39,31 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="bookingWindowRight">
                 <div class="bookingWindowRightTop">
                     <div class="chosenHotelPrices flexCenter">
-                        <div>
-                            <label for="oneNightPrice" class="oneNightPriceLabel pricesLabel">1 day:</label>
-                            <span id="oneNightPrice" class="prices" style="color: #FFF;">${response.FormOneNightPrice} &#8382;</span>
-                        </div>
-                        <div>
-                            <label for="oneWeekPrice" class="oneWeekPriceLabel pricesLabel">7 days:</label>
-                            <span id="oneWeekPrice" class="prices" style="color: #FFF;">${response.FormOneWeekPrice} &#8382;</span>
-                        </div>
-                        <div>  
-                            <label for="oneMonthPrice" class="oneMonthPriceLabel pricesLabel">30 days:</label>
-                            <span id="oneMonthPrice" class="prices" style="color: #FFF;">${response.FormOneMonthPrice} &#8382;</span>
+                        <h3>How long are you planning to stay at ${response.FormHotelName}?</h3>
+                        <div class="setPriceList">
+                            <div>
+                                <div>
+                                    <label for="oneNightPrice" class="oneNightPriceLabel pricesLabel">1 day:</label>
+                                    <span id="oneNightPrice" class="prices" style="color: #FFF;">${response.FormOneNightPrice} &#8382;</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="oneWeekPrice" class="oneWeekPriceLabel pricesLabel">7 days:</label>
+                                    <span id="oneWeekPrice" class="prices" style="color: #FFF;">${response.FormOneWeekPrice} &#8382;</span>
+                                </div>
+                            </div>
+                            <div>  
+                                <div>
+                                    <label for="oneMonthPrice" class="oneMonthPriceLabel pricesLabel">30 days:</label>
+                                    <span id="oneMonthPrice" class="prices" style="color: #FFF;">${response.FormOneMonthPrice} &#8382;</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="amountOfNights flexCenter">
                         <div>
-                            <label for="inputDesiredDays" class="inputDesiredDaysLabel">How many nights are you staying?</label>
+                            <label for="inputDesiredDays" class="inputDesiredDaysLabel">Amount of nights:</label>
                             <input id="inputDesiredDays" type="number" placeholder="For example: 7">
                         </div>
                         <div>
@@ -76,12 +86,29 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
     </div>
 `;
+        const inputDesiredDays = document.querySelector("#inputDesiredDays");
+        const priceOutput = document.querySelector("#priceOutput");
+        inputDesiredDays.addEventListener("input", () => {
+        const desiredDays = inputDesiredDays.value;
+        const totalPrice = desiredDays * oneNightPrice;
+        priceOutput.textContent = totalPrice + " " + "₾";
+
+        const bogIcon = document.querySelector("#bogIcon");
+        const tbcIcon = document.querySelector("#tbcIcon");
+
+        bogIcon.addEventListener("click", () => {
+            const url = new URL("./paymentBOG.html", window.location.href);
+            url.searchParams.set("totalPrice", totalPrice);
+            window.location.href = url.href;
+          });
+
+        tbcIcon.addEventListener("click", () => {
+        const url = new URL("./paymentTBC.html", window.location.href);
+        url.searchParams.append("totalPrice", totalPrice);
+        window.location.href = url.href;
+        });
     });
-  const inputDesiredDays = document.querySelector("#inputDesiredDays");
-  const priceOutput = document.querySelector("#priceOutput");
-  inputDesiredDays.addEventListener("input", () => {
-    const desiredDays = inputDesiredDays.value;
-    const totalPrice = desiredDays * oneNightPrice;
-    priceOutput.textContent = totalPrice + " &#8382;";
   });
 });
+
+

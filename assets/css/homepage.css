@@ -618,3 +618,40 @@ h5{
     animation: Appear 1.3s;
     gap: 0.5vh;
 }
+
+@media (max-width: 1700px){
+
+
+    #chatboxbtn{
+        right: 2vw;
+    }
+}
+@media (max-width: 1500px){
+    #chatboxbtn{
+        height: 7vh;
+        width: 4vw;
+    }
+}
+@media (max-width: 1200px){
+    #chatboxbtn{
+        height: 7vh;
+        width: 5vw;
+    }
+}
+@media (max-width: 1000px){
+    #chatboxbtn{
+        right: 3vw;
+        height: 7vh;
+        width: 6.5vw;
+    }
+}
+@media (max-width: 720px){
+    #chatboxbtn{
+        right: 3vw;
+        height: 7vh;
+        width: 8vw;
+    }
+}
+@media (max-width: 520px){
+
+}

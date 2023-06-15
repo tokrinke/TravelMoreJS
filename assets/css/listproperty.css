@@ -296,3 +296,36 @@ input::file-selector-button{
     display: flex;
     gap: 2vw;
 }
+@media (max-width: 1300px){
+    #createListingBtn{
+        height: 4.2vh;
+        width: 11vw;
+    }
+}
+@media (max-width: 1000px){
+    #createListingBtn{
+        height: 4.2vh;
+        width: 16vw;
+    }
+}
+@media (max-width: 800px){
+    #createListingBtn{
+        height: 4.5vh;
+        width: 20vw;
+    }
+}
+@media (max-width: 650px){
+    .listingFormTopLeft{
+        height: 100%;
+        width: 40%;
+        padding-left: 1vw;
+        padding-top: 1vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .listingFormTopLeft h3{
+        font-size: 2vh;
+        font-family: FigtreeMedium;
+        color: #196A43;
+    }
+}

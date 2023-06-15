@@ -31,7 +31,7 @@ firebase
   .ref("listings")
   .on("child_added", (snapshot) => {
     const response = snapshot.val();
-    const hotelId = snapshot.key; // Retrieve the hotel ID
+    const hotelId = snapshot.key;
 
     listingsSection.innerHTML += `
       <div class="aListing">

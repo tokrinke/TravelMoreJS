@@ -2,10 +2,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
-
-
-
 .cursorHover{
     cursor: pointer;
 }
@@ -106,7 +102,6 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-
 }
 .subBox h1{
     position: relative;
@@ -359,4 +354,497 @@ body{
     box-sizing: border-box;
     animation: Appear 1.3s;
     backdrop-filter: blur(0.8px)
+}
+@media (max-width: 1700px){
+    .authTitle{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 1500px){
+
+    .defaultBtn{
+        font-family: FigtreeRegular;
+        font-size: 1em;
+        border: none;
+        background-color: #196A43;
+        color: #FFF;
+        height: 3.5em;
+        width: 10em;
+        border-radius: 4px;
+        transition: 0.6s;
+        animation: Appear 1.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .authMenu{
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 9em;
+        top: 22em;
+        display: block;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .authTitle{
+        font-size: 2em;
+    }
+    .subBox h1{
+        font-size: 4em;
+    }
+    .subBox p{
+        font-size: 1.2em;
+    }
+    .insideAuthMenu{
+        left: 10em;
+    }
+    .socials{
+        left: 1em;
+        top: 14em;
+    }
+    .authMenu{
+        bottom: 5vw;
+    }
+    .logInAuthMenuBtnsInner{
+        height: 2.5em;
+        width: 10em;
+    }
+    .logInTitle{
+        font-size: 2em;
+    }
+    .logInBar{
+        right: 7em;
+        top: 20em;
+    }
+    .bigInput{
+        height: 2.5em;
+        width: 24em;
+    }
+    .smallInput{
+        height: 2.5em;
+        width: 11em;
+    }
+}
+@media (max-width: 1200px){
+    .defaultBtn{
+        font-family: FigtreeRegular;
+        font-size: 1em;
+        border: none;
+        background-color: #196A43;
+        color: #FFF;
+        height: 3em;
+        width: 8em;
+        border-radius: 4px;
+        transition: 0.6s;
+        animation: Appear 1.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .authMenu{
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 9em;
+        top: 22em;
+        display: block;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .logInBar{
+        right: 7em;
+        top: 20em;
+    }
+    .authTitle{
+        font-size: 1.5em;
+    }
+    .subBox h1{
+        font-size: 3em;
+    }
+    .subBox p{
+        font-size: 1.2em;
+    }
+    .insideAuthMenu{
+        left: 10em;
+    }
+    .socials{
+        left: 2em;
+        top: 14em;
+    }
+    .authMenu{
+        bottom: 5vw;
+    }
+    .logInAuthMenuBtnsInner{
+        height: 2.5em;
+        width: 7em;
+    }
+    .logInTitle{
+        font-size: 1.7em;
+    }
+    .bigInput{
+        height: 2.5em;
+        width: 20em;
+    }
+    .smallInput{
+        height: 2.5em;
+        width: 9em;
+    }
+}
+
+@media (max-width: 1000px){
+    .defaultBtn{
+        font-family: FigtreeRegular;
+        font-size: 1em;
+        border: none;
+        background-color: #196A43;
+        color: #FFF;
+        height: 3.5em;
+        width: 6em;
+        border-radius: 4px;
+        transition: 0.6s;
+        animation: Appear 1.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .authMenu{
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 6em;
+        top: 18em;
+        display: block;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .authTitle{
+        font-size: 1.5em;
+    }
+    .subBox h1{
+        font-size: 3em;
+    }
+    .subBox p{
+        font-size: 1em;
+        left: 9vw;
+    }
+    .insideAuthMenu{
+        left: 10em;
+    }
+    .socials{
+        left: 3em;
+        top: 14em;
+    }
+    .authMenu{
+        bottom: 5vw;
+    }
+    .logInAuthMenuBtnsInner{
+        height: 2.5em;
+        width: 6em;
+    }
+    .logInTitle{
+        font-size: 1.5em;
+    }
+    .bigInput{
+        height: 2.5em;
+        width: 16em;
+    }
+    .smallInput{
+        height: 2.5em;
+        width: 7em;
+    }
+}
+@media (max-width: 720px){
+    .defaultBtn{
+        font-family: FigtreeRegular;
+        font-size: 1em;
+        border: none;
+        background-color: #196A43;
+        color: #FFF;
+        height: 3.5em;
+        width: 6em;
+        border-radius: 4px;
+        transition: 0.6s;
+        animation: Appear 1.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .authMenu{
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 4em;
+        top: 20em;
+        display: block;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .logInBar{
+        right: 4em;
+        top: 20em;
+    }
+    .authTitle{
+        font-size: 1em;
+    }
+    .subBox h1{
+        font-size: 3em;
+    }
+    .subBox p{
+        font-size: 1em;
+        left: 12vw;
+    }
+    .insideAuthMenu{
+        left: 10em;
+    }
+    .socials{
+        left: 3em;
+        top: 15em;
+    }
+    .authMenu{
+        bottom: 5vw;
+    }
+    .logInAuthMenuBtnsInner{
+        height: 2.5em;
+        width: 6em;
+    }
+    .logInTitle{
+        font-size: 1.5em;
+    }
+    .bigInput{
+        height: 2.5em;
+        width: 14em;
+    }
+    .smallInput{
+        height: 2.5em;
+        width: 6em;
+    }
+    .userAccInfoBox{
+        display: none;
+    }
+}
+@media (max-width: 520px){
+    .defaultBtn{
+        font-family: FigtreeRegular;
+        font-size: 1em;
+        border: none;
+        background-color: #196A43;
+        color: #FFF;
+        height: 4em;
+        width: 10em;
+        border-radius: 4px;
+        transition: 0.6s;
+        animation: Appear 1.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .authMenu{
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 3em;
+        top: 18em;
+        display: block;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .logInBar {
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 3em;
+        top: 18em;
+        display: none;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .userAccInfoBox{
+        display: none;
+    }
+    .subBox h1{
+        font-size: 2em;
+        left: 15vw;
+    }
+    .authTitle{
+        font-size: 1em;
+    }
+    .subBox p{
+        font-size: 1em;
+        left: 20vw;
+    }
+    .welcomeBoxBtns {
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        position: relative;
+        left: 2em;
+    }
+    .insideAuthMenu{
+        left: 10em;
+    }
+    .socials{
+        left: 4em;
+        top: 13em;
+    }
+    .authMenu{
+        bottom: 5vw;
+    }
+    .logInAuthMenuBtnsInner{
+        height: 2.5em;
+        width: 6em;
+    }
+    .logInTitle{
+        font-size: 1.5em;
+    }
+    .bigInput{
+        height: 2em;
+        width: 9em;
+    }
+    .smallInput{
+        height: 2em;
+        width: 4em;
+        font-size: 0.8em;
+    }
+    #finishSignUp{
+        height: 3em;
+        width: 8em;
+    }
+    #finishLogIn{
+        height: 2.5em;
+        width: 5em;
+    }
+    #SignUpBtn{
+        height: 3em;
+        width: 5em;
+    }
+    .welcomeBoxBtns{    
+        margin-left: 8vw;
+    }
+    .logInAuthMenuBtns{
+        display: flex;
+        gap: 0.2em;
+    }
+}
+@media (max-width: 380px){
+    .defaultBtn{
+        font-family: FigtreeRegular;
+        font-size: 1em;
+        border: none;
+        background-color: #196A43;
+        color: #FFF;
+        height: 4em;
+        width: 10em;
+        border-radius: 4px;
+        transition: 0.6s;
+        animation: Appear 1.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: relative;
+        z-index: 0;
+    }
+    .authMenu{
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 3em;
+        top: 18em;
+        display: block;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .logInBar {
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        right: 3em;
+        top: 20em;
+        display: none;
+        background-color: transparent;
+        border: 1px white;
+        text-decoration: none;
+        gap: 1em;
+    }
+    .userAccInfoBox{
+        display: none;
+    }
+    .subBox h1{
+        font-size: 2em;
+        left: 15vw;
+    }
+    .authTitle{
+        font-size: 0.7em;
+    }
+    .subBox p{
+        font-size: 0.8em;
+        left: 25vw;
+    }
+    .welcomeBoxBtns {
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        position: relative;
+        left: 2em;
+    }
+    .insideAuthMenu{
+        left: 10em;
+    }
+    .socials{
+        left: 4em;
+        top: 13em;
+    }
+    .authMenu{
+        bottom: 5vw;
+    }
+    .logInAuthMenuBtnsInner{
+        height: 2.5em;
+        width: 6em;
+    }
+    .logInTitle{
+        font-size: 1.5em;
+    }
+    .bigInput{
+        height: 2em;
+        width: 8em;
+    }
+    .smallInput{
+        height: 2em;
+        width: 3em;
+        font-size: 0.8em;
+    }
+    #finishSignUp{
+        height: 3em;
+        width: 6em;
+    }
+    #finishLogIn{
+        height: 2.5em;
+        width: 5em;
+    }
+    #SignUpBtn{
+        height: 3em;
+        width: 5em;
+    }
+    .welcomeBoxBtns{    
+        margin-left: 8vw;
+    }
+    .logInAuthMenuBtns{
+        display: flex;
+        gap: 0.2em;
+    }
 }

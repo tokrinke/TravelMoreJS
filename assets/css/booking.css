@@ -108,15 +108,14 @@ body{
 .bookingWindowLeft{
     width: 40%;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
 }
 .displayChosenHotelImg{
-    width: 80%;
-    height: 30%;
-    
+    width: 95%;
+    height: 40%;
     margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 #chosenHotelImg{
     height: 100%;
@@ -125,7 +124,7 @@ body{
 }
 .chosenHotelDetails{
     width: 100%;
-    height: 70%;
+    height: 60%;
     padding: 1vw;
 }
 .chosenHotelDetailsTop{
@@ -134,6 +133,7 @@ body{
 }
 .chosenHotelDetailsTop h3{
     font-family: FigtreeMedium;
+    font-size: 3vh;
     color: #FFF;
 }
 .chosenHotelDetailsTop span{
@@ -143,6 +143,9 @@ body{
 .chosenHotelDetailsTopBottom{
     height: 80%;
     width: 100%;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
 }
 .bio{
     font-family: FigtreeMedium;
@@ -154,6 +157,10 @@ body{
     font-family: FigtreeMedium;
     color: #FFF;
     margin-bottom: 1vh;
+}
+.chosenHotelDetailsTopBottom div{
+    display: flex;
+    gap: 2vw;
 }
 .chosenHotelDetailsTopBottom div span{
     font-family: FigtreeMedium;
@@ -173,6 +180,27 @@ body{
     height: 70%;
     width: 100%;
     gap: 2vw;
+    flex-direction: column;
+}
+.chosenHotelPrices h3{
+    font-family: FigtreeMedium;
+    color: #004021;
+    font-size: 2vh;
+    margin: 0;
+}
+.chosenHotelPrices .setPriceList{
+    display: flex;
+    flex-direction: row;
+}
+.chosenHotelPrices .setPriceList div{
+    display: flex;
+    flex-direction: rowv;
+    justify-content: space-evenly;
+    gap: 1vh;
+}
+.chosenHotelPrices .setPriceList div div{
+    display: flex;
+    flex-direction: column;
 }
 .chosenHotelPrices span{
     display: flex;
@@ -230,6 +258,9 @@ body{
 }
 #inputDesiredDays:hover{
     transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#inputDesiredDays:focus{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 #inputDesiredDays::placeholder{
@@ -332,4 +363,309 @@ body{
 .socials{
     display: flex;
     gap: 2vw;
+}
+
+
+.paymentFormBOG{
+    height: 98%;
+    width: 40%;
+    background-color: #131313;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.paymentFormTop{
+    height: 25%;
+    width: 100%;
+    background-color: #FD681B;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.paymentFormTop span{
+    position: absolute;
+    z-index: 1;
+    color: #FFF;
+    font-family: FigtreeMedium;
+    font-size: 2vh;
+    margin: auto;
+    padding-bottom: 2vh;
+}
+#paymentFormImg{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.paymentFormBody{
+    height: 65%;
+    width: 100%;
+    flex-direction: column;
+    gap: 2vh;
+}
+.paymentInputs{
+    display: flex;
+    align-content: center;
+    height: 4.2vh;
+    width: 17vw;
+    padding-left: 0.5vw;
+    background-color: #131313;
+    font-family: FigtreeMedium;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    transition: 0.6s;
+}
+.paymentInputs:hover{
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.paymentInputs::placeholder{
+    font-family: FigtreeMedium;
+    color: #393737;
+}
+.paymentInputsLabel{
+    font-family: FigtreeMedium;
+    color: #FD681B;
+}
+.inputDivs{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.lastDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.lastDetails .expirations{
+    display: flex;
+    flex: row;
+    gap: 5vh;
+}
+.paymentInputsSmall{
+    display: flex;
+    align-content: center;
+    height: 4.2vh;
+    width: 5vw;
+    padding-left: 0.5vw;
+    background-color: #131313;
+    font-family: FigtreeMedium;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    transition: 0.6s;
+}
+.paymentInputsSmall:hover{
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.expirationsInput{
+    height: 4.2vh;
+    width: 7vw;
+}
+.paymentFormFooter{
+    height: 10%;
+    width: 100%;
+}
+#payWithBOG{
+    background-color: #FD681B;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    width: 5vw;
+    height: 3.5vh;
+    color: #FFF;
+    font-family: FigtreeRegular;
+    font-size: 2vh;
+}
+
+
+
+
+
+.paymentFormTBC{
+    height: 98%;
+    width: 40%;
+    background-color: #131313;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.paymentFormTopTBC{
+    height: 25%;
+    width: 100%;
+    background-color: #0086B8;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.paymentFormTopTBC span{
+    position: absolute;
+    z-index: 1;
+    color: #FFF;
+    font-family: FigtreeMedium;
+    font-size: 2vh;
+    margin: auto;
+    padding-bottom: 2vh;
+}
+#paymentFormImgTBC{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.paymentInputsLabelTBC{
+    color: #0086B8;
+    font-family: FigtreeMedium;
+}
+#payWithTBC{
+    background-color: #0086B8;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    width: 5vw;
+    height: 3.5vh;
+    color: #FFF;
+    font-family: FigtreeRegular;
+    font-size: 2vh;
+}
+
+@media (max-width: 1200px){
+    .chosenHotelDetailsTopBottom{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        gap: 1vh;
+        flex-direction: column;
+    }
+    .bio{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        min-height: 50%;
+        width: 80%;
+    }
+    .chosenHotelDetailsTopBottom span{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        margin-bottom: 1vh;
+    }
+    .chosenHotelDetailsTopBottom div{
+        display: flex;
+        gap: 2vw;
+    }
+    .chosenHotelDetailsTopBottom div span{
+        font-family: FigtreeMedium;
+        color: #004021;
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 1000px){
+    .chosenHotelDetailsTopBottom{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        gap: 1vh;
+        flex-direction: column;
+    }
+    .bio{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        min-height: 50%;
+        width: 80%;
+        font-size: 0.8em;
+        margin-top: 1em;
+    }
+    .chosenHotelDetailsTopBottom span{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        margin-bottom: 1vh;
+    }
+    .chosenHotelDetailsTopBottom div{
+        display: flex;
+        gap: 2vw;
+    }
+    .chosenHotelDetailsTopBottom div span{
+        font-family: FigtreeMedium;
+        color: #004021;
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 1000px){
+    .chosenHotelDetailsTopBottom{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        gap: 1vh;
+        flex-direction: column;
+    }
+    .bio{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        min-height: 50%;
+        width: 80%;
+        font-size: 0.8em;
+        margin-top: 1em;
+    }
+    .chosenHotelDetailsTopBottom span{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        margin-bottom: 1vh;
+    }
+    .chosenHotelDetailsTopBottom div{
+        display: flex;
+        gap: 2vw;
+    }
+    .chosenHotelDetailsTopBottom div span{
+        font-family: FigtreeMedium;
+        color: #004021;
+        font-size: 0.7em;
+    }
+    .bookingWindowRightTop{
+        height: 62%;
+    }
+    .bookingWindowRightBottom{
+        height: 28%;
+    }
+}   
+@media (max-width: 820px){
+    #inputDesiredDays{
+        width: 20vw;
+    }
+    .chosenHotelPrices h3{
+        font-size: 0.7em;
+        padding-left: 2vw;
+    }
+    .prices{
+        font-size: 0.7em;
+    }
+    .pricesLabel{
+        font-size: 0.6em;
+    }
+    .bookingWindowSplitter h3{
+        font-size: 0.9em;
+    }
+    .chosenHotelDetailsTop span{
+        font-size: 0.8em;
+        margin-bottom: 1em;
+    }
+    .bio{
+        font-family: FigtreeMedium;
+        color: #FFF;
+        min-height: 50%;
+        width: 80%;
+        font-size: 0.7em;
+        margin-top: 1em;
+    }
+    .chosenHotelDetailsTopBottom div{
+        flex-direction: column;
+    }
+    .chosenHotelDetailsTopBottom div span{
+        font-family: FigtreeMedium;
+        color: #004021;
+        font-size: 0.6em;
+    }
+    .bookingWindowRightTop{
+        height: 70%;
+    }
+    .bookingWindowRightBottom{
+        height: 20%;
+    }
 }
