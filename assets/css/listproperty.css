@@ -301,17 +301,42 @@ input::file-selector-button{
         height: 4.2vh;
         width: 11vw;
     }
+    .hotelDetailInputs{
+        height: 4.2vh;
+        width: 17vw;
+        font-size: 0.7em;
+    }
+    .hotelDetailInputsLabels{
+        font-size: 0.8em;
+    }
 }
 @media (max-width: 1000px){
     #createListingBtn{
         height: 4.2vh;
         width: 16vw;
     }
+    .hotelDetailInputs{
+        height: 4.2vh;
+        width: 17vw;
+        font-size: 0.7em;
+    }
+    .hotelDetailInputsLabels{
+        font-size: 0.8em;
+    }
 }
 @media (max-width: 800px){
     #createListingBtn{
         height: 4.5vh;
         width: 20vw;
+    }
+    .listpropertyHeaderLeft {
+        margin-left: 8vw;
+    }
+    .listpropertyHeaderRight{
+        margin-right: 5vw;
+    }
+    .listpropertyHeaderRight a{
+        font-size: 0.7em;
     }
 }
 @media (max-width: 650px){
@@ -327,5 +352,38 @@ input::file-selector-button{
         font-size: 2vh;
         font-family: FigtreeMedium;
         color: #196A43;
+    }
+}
+@media (max-width: 500px){
+    .hotelDetailInputs{
+        height: 4.2vh;
+        width: 17vw;
+        font-size: 0.5em;
+    }
+    .hotelDetailInputsLabels{
+        font-size: 0.7em;
+    }
+    .listpropertyHeaderLeft {
+        margin-left: 14vw;
+    }
+    .listpropertyHeaderRight{
+        margin-right: 5vw;
+    }
+    .listpropertyHeaderRight a{
+        font-size: 0.55em;
+    }
+    #createListingBtn{
+        height: 4.2vh;
+        width: 25vw;
+        font-size: 0.8em;
+    }
+    .listingFormTopLeft h3{
+        font-size: 1em; 
+    }
+    .prices h3{
+        font-size: 1em; 
+    }
+    .hotelierDetails h3{
+        font-size: 1em; 
     }
 }

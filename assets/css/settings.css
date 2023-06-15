@@ -448,3 +448,193 @@ input::file-selector-button{
     transition: 1s;
     animation: Appear 1.3s;
 }
+@media (max-width: 1500px){
+    .displaysProfilePic {
+        height: 14;
+        width: 10vw;
+    }
+    #userRegDate{
+        font-size: 1em;
+        margin-left: 2vw;
+    }
+    #saveChangesBtn{
+        width: 12vw;
+    }
+    .listingTemplateInfo h3{
+        font-size: 0.9em;
+    }
+    .listingTemplateInfo span{
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+}
+@media (max-width: 1200px){
+    .displaysProfilePic {
+        height: 16vh;
+        width: 14vw;
+    }
+    .infoBtn {
+        font-size: 0.9em;
+        height: 3.5vh;
+        width: 10vw;
+    }
+    .listingsBtn{
+        font-size: 0.9em;
+        height: 3.5vh;
+        width: 10vw;
+    }
+    #userRegDate{
+        font-size: 0.8em;
+        margin-left: 2vw;
+    }
+    #saveChangesBtn{
+        width: 12vw;
+    }
+    .listingTemplateInfo h3{
+        font-size: 0.9em;
+    }
+    .listingTemplateInfo span{
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+}
+@media (max-width: 1000px){
+    .displaysProfilePic {
+        height: 16vh;
+        width: 14vw;
+    }
+    .infoBtn {
+        font-size: 0.9em;
+        height: 3.5vh;
+        width: 12vw;
+    }
+    .listingsBtn{
+        font-size: 0.9em;
+        height: 3.5vh;
+        width: 12vw;
+    }
+    .listingTemplateInfo h3{
+        font-size: 0.9em;
+    }
+    .listingTemplateInfo span{
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+    .detailsHeader{
+        font-size: 1.4em;
+    }
+    .usersFullname {
+        font-size: 1em;
+    }
+    #saveChangesBtn{
+        width: 15vw;
+    }
+    .profilePicInfoBox{
+        font-size: 0.8em;
+    }
+    .profilePicInfoBox p{
+        font-size: 0.9em;
+    }
+    #userRegDate{
+        font-size: 0.8em;
+        margin-left: 2vw;
+    }
+    #saveChangesBtn{
+        width: 16vw;
+    }
+    .settingsHeaderLeft{
+        margin-left: 6vw;
+    }
+    .settingsHeaderRight {
+        margin-right: 6vw;
+    }
+}
+@media (max-width: 800px){
+    .displaysProfilePic {
+        height: 12vh;
+        width: 14vw;
+    }
+    #saveChangesBtn{
+        width: 17vw;
+    }
+    .infoBtn {
+        font-size: 0.9em;
+        height: 3.5vh;
+        width: 15vw;
+    }
+    .listingsBtn{
+        font-size: 0.9em;
+        height: 3.5vh;
+        width: 15vw;
+    }
+    #saveChangesBtn{
+        width: 19vw;
+    }
+    .detailsHeader{
+        font-size: 1.4em;
+    }
+    .usersFullname {
+        font-size: 1em;
+    }
+    .profilePicInfoBox{
+        font-size: 0.7em;
+    }
+    .profilePicInfoBox p{
+        font-size: 0.8em;
+    }
+    #userRegDate{
+        font-size: 0.7em;
+        margin-left: 2vw;
+    }
+}
+@media (max-width: 620px){
+    .displaysProfilePic {
+        height: 12vh;
+        width: 14vw;
+    }
+    .infoBtn {
+        font-size: 0.9em;
+        height: 4.5vh;
+        width: 20vw;
+    }
+    .listingsBtn{
+        font-size: 0.9em;
+        height: 4.5vh;
+        width: 20vw;
+    }
+    .listingTemplateInfo h3{
+        font-size: 0.9em;
+    }
+    .listingTemplateInfo span{
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+    .detailsHeader{
+        font-size: 1.3em;
+    }
+    .usersFullname {
+        font-size: 0.9em;
+    }
+    #saveChangesBtn{
+        width: 18vw;
+    }
+    .profilePicInfoBox{
+        font-size: 0.7em;
+    }
+    .profilePicInfoBox p{
+        font-size: 0.8em;
+    }
+    #userRegDate{
+        font-size: 0.6em;
+        margin-left: 2vw;
+    }
+    #saveChangesBtn{
+        width: 20vw;
+    }
+    .settingsHeaderLeft{
+        margin-left: 10vw;
+    }
+    .settingsHeaderRight {
+        margin-right: 10vw;
+    }
+}

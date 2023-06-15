@@ -383,7 +383,18 @@ body{
     footer h2{
         font-size: 0.7em;
     }
-
+    .chatInfo{
+        font-size: 0.8em;
+    }
+    .aboutUsInfoContent p{
+        font-size: 1em;
+    }
+    .contactLeft p{
+        font-size: 1em;
+    }
+    .locInfo  p{
+        font-size: 1em;
+    }
 }
 @media (max-width: 720px){
     .aboutUsHeaderLeft {
@@ -406,5 +417,17 @@ body{
     .addressP a{
         font-size: 0.6em;
         padding-left: 5px;
+    }
+    .chatInfo{
+        font-size: 0.8em;
+    }
+    .aboutUsInfoContent p{
+        font-size: 0.9em;
+    }
+    .contactLeft p{
+        font-size: 0.9em;
+    }
+    .locInfo  p{
+        font-size: 0.9em;
     }
 }
