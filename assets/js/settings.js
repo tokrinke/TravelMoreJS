@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(listingsRef);
     if (
       listingData.uploadedBy === userId ||
-      userId === "7d2cb77a-2323-4774-8980-1d1ebbe11f70"
+      userId === "022ef8a2-cc8b-438f-8093-5d92cff2f2bf"
     ) {
       displayUsersListings.innerHTML += `
         <div class="listingTemplateDiv">

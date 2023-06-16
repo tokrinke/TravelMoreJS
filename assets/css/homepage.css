@@ -4,6 +4,9 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 .defaultBtn{
     font-family: FigtreeRegular;
     font-size: 1em;
@@ -91,9 +94,16 @@ h5{
 .hpHeaderRight a{
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
+}
+.hpHeaderRight a:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
 }
 .dropdown{
     position: relative;
+    display: none;
 }
 .userIconButton{
     text-decoration: none;
@@ -104,13 +114,15 @@ h5{
 .dropdownMenu{
     position: absolute;
     z-index: 1;
-    left: calc(100% - 2vw);
+    left: calc(100% - 4vw);
     top: calc(100% + 1vh);
     opacity: 0;
     background-color: #131313;
     transform: translateY(-10px);
     pointer-events: none;
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    width: 7vw;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 .dropdown.active > .userIconButton + .dropdownMenu{
     opacity: 1;
@@ -127,8 +139,13 @@ h5{
     outline: none;
     border: none;
     background-color: transparent;
+    transition: 0.3s;
 }
-
+.toSettings:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
+}
 .logOutBtn{
     color: #FFF; 
     text-decoration: none;
@@ -138,10 +155,12 @@ h5{
     font-family: FigtreeRegular;
     font-weight: 600;
     font-size: 1.5vh;
+    transition: 0.3s;
 }
-
 .logOutBtn:hover{
     cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
 }
 .hpUserIcon{
     display: flex;
@@ -309,7 +328,6 @@ h5{
     flex-direction: column;
     justify-content: space-between;
     padding-left: 1vw;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
 }
 .otherDetails span{
     font-family: FigtreeMedium;
@@ -373,10 +391,6 @@ h5{
     font-family: FigtreeMedium;
     border-radius: 2px;
 }
-
-
-
-
 .chat{
     height: 7vh;
     width: 3.5vw;
@@ -620,8 +634,6 @@ h5{
 }
 
 @media (max-width: 1700px){
-
-
     #chatboxbtn{
         right: 2vw;
     }
@@ -631,27 +643,226 @@ h5{
         height: 7vh;
         width: 4vw;
     }
+    .hotelDetailsHeaderLeft h2{
+        font-size: 1.2em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.9em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.8em;
+    }
+    .displayStartingPrice{
+        font-size: 0.8em;
+    }
 }
 @media (max-width: 1200px){
     #chatboxbtn{
         height: 7vh;
         width: 5vw;
     }
+    .hotelDetailsHeaderLeft h2{
+        font-size: 1.1em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.8em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.7em;
+    }
+    .displayStartingPrice{
+        font-size: 0.7em;
+    }
 }
 @media (max-width: 1000px){
+    .aListing{
+        width: 70%;
+        height: 30%;
+    }
     #chatboxbtn{
         right: 3vw;
         height: 7vh;
         width: 6.5vw;
     }
+    .hotelDetailsHeaderLeft h2{
+        font-size: 1em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.7em;
+    }
+    .hotelDetailsBottomLeft span{
+        font-size: 0.8em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.6em;
+        padding-bottom: 0.5vh;
+    }
+    .displayStartingPrice{
+        font-size: 0.6em;
+    }
+    .dropdownMenu{
+        left: calc(100% - 6vw);
+        top: calc(100% + 1vh);
+        width: 10vw;
+    }
 }
 @media (max-width: 720px){
     #chatboxbtn{
-        right: 3vw;
         height: 7vh;
         width: 8vw;
     }
+    .aListing{
+        width: 80%;
+        height: 40%;
+    }
+    .hotelDetailsHeaderLeft h2{
+        font-size: 1em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.7em;
+    }
+    .hotelDetailsBottomLeft span{
+        font-size: 0.7em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.53em;
+        padding-bottom: 0.5vh;
+    }
+    .displayStartingPrice{
+        font-size: 0.55em;
+    }
+    .hpHeaderLeft{
+        margin-left: 5vw;
+    }
+    .hpHeaderRight{
+        margin-right: 5vw;
+        gap: 1vw;
+    }
+    .dropdownMenu{
+        left: calc(100% - 7vw);
+        top: calc(100% + 1vh);
+        width: 10vw;
+    }
+    .bgPic{
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+    }
+}
+@media (max-width: 620px){
+    .hotelDetailsHeaderLeft h2{
+        font-size: 0.9em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.65em;
+    }
+    .hotelDetailsBottomLeft span{
+        font-size: 0.65em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.53em;
+        padding-bottom: 0.5vh;
+    }
+    .displayStartingPrice{
+        font-size: 0.55em;
+    }
 }
 @media (max-width: 520px){
+    #chatboxbtn{
+        height: 9vh;
+        width: 10vw;
+        display: none;
+    }
+    .chatBox{
+        right: 0vw;
+        margin-right: 1vw
+    }
+    .aListing{
+        width: 80%;
+        height: 40%;
+    }
+    .hotelDetailsHeaderLeft h2{
+        font-size: 0.8em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.6em;
+    }
+    .hotelDetailsBottomLeft span{
+        font-size: 0.7em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.5em;
+    }
+    .displayStartingPrice{
+        font-size: 0.5em;
+    }
+    .hpSearchBgPic{
 
+    }
+    .dropdownMenu{
+        width: 10vw;
+    }
+    .bgPic{
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+    }
+    .hpHeaderLeft{
+        margin-left: 12vw;
+    }
+    .hpHeaderRight{
+        margin-right: 10vw;
+    }
+    .hpHeaderRight a{
+        font-size: 0.7em;
+    }
+    .dropdownMenu{
+        left: calc(100% - 12vw);
+        top: calc(100% + 1vh);
+        width: 18vw;
+    }
+    .inputSearch{
+        width: 40vw;
+    }
+}
+@media (max-width: 420px){
+    .inputSearch{
+        width: 55vw;
+    }
+    .hpHeaderLeft{
+        margin-left: 12vw;
+    }
+    .hpHeaderRight{
+        margin-right: 10vw;
+    }
+    .hpHeaderRight a{
+        font-size: 0.7em;
+    }
+    .dropdownMenu{
+        left: calc(100% - 12vw);
+        top: calc(100% + 1vh);
+        width: 18vw;
+    }  
+    .inputSearch{
+        width: 40vw;
+    }
+    .hotelDetailsHeaderLeft h2{
+        font-size: 0.8em;
+    }
+    .hotelDetailsHeaderLeft div span{
+        font-size: 0.6em;
+    }
+    .hotelDetailsBottomLeft span{
+        font-size: 0.6em;
+    }
+    .hotelDetailsBottomLeft div span{
+        font-size: 0.43em;
+        padding-bottom: 0.5vh;
+    }
+    .displayStartingPrice{
+        font-size: 0.45em;
+    }
+    .hpFooter p{
+        font-size: 0.8em;
+    }
 }

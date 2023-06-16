@@ -44,6 +44,12 @@ body{
 .bookingHeaderRight a{
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
+}
+.bookingHeaderRight a:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
 }
 .dropdown{
     position: relative;
@@ -150,8 +156,12 @@ body{
 .bio{
     font-family: FigtreeMedium;
     color: #FFF;
-    min-height: 50%;
+    height: 55%;
     width: 80%;
+    overflow-y: scroll;
+}
+.bio::-webkit-scrollbar{
+    display: none;
 }
 .chosenHotelDetailsTopBottom span{
     font-family: FigtreeMedium;
@@ -589,6 +599,10 @@ body{
     }
 }
 @media (max-width: 1000px){
+    .bookingHeaderLeft {
+        padding-left: 6vw;
+        font-size: 3vh;
+    }
     .chosenHotelDetailsTopBottom{
         height: 80%;
         width: 100%;
@@ -667,5 +681,19 @@ body{
     }
     .bookingWindowRightBottom{
         height: 20%;
+    }
+    .chosenHotelDetailsTop h3{
+        font-size: 1.2em;
+    }
+     .bookingHeaderLeft {
+       
+    }
+}
+@media (max-width: 540px){
+    .bookingHeaderLeft {
+        padding-left: 10vw;
+    }
+    .chosenHotelDetailsTop h3{
+        font-size: 0.8em;
     }
 }

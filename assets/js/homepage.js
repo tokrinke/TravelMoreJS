@@ -1,3 +1,11 @@
+const dropdownMenu = document.querySelector(".dropdown");
+const signUpRef = document.querySelector(".signUpRef");
+
+if(userToken && activeUser){
+    dropdownMenu.style.display = "block";
+    signUpRef.style.display = "none";
+}
+
 // Newsletter
 const subBtn = document.querySelector(".subBtn");
 

@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span><i class="fa-solid fa-location-dot fa-lg" style="color: #004021;"></i>  ${response.FormHotelLocation}, ${response.FormHotelAddress}</span>
                     </div>
                     <div class="chosenHotelDetailsTopBottom">
-                        <p class="bio"> • Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque deleniti veritatis facilis quis perferendis nemo vitae iusto animi saepe dolores eaque fuga illo facere debitis doloremque reiciendis, aut ad accusantium.</p>
+                        <p class="bio"> • ${response.FormHotelBio}</p>
                         <span><i class="fa-solid fa-user fa-sm" style="color: #FFF;"></i>  ${response.FormContactName}</span>
                         <div>
                             <span><i class="fa-solid fa-envelope fa-sm" style="color: #ffffff;"></i>  ${response.FormContactEmail}</span>

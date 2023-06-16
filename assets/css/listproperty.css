@@ -55,6 +55,79 @@ body{
     text-decoration: none;
     color: #fff;
 }
+.listpropertyHeaderRight a:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
+}
+.dropdown{
+    position: relative;
+}
+.userIconButton{
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.dropdownMenu{
+    position: absolute;
+    z-index: 1;
+    left: calc(100% - 4vw);
+    top: calc(100% + 1vh);
+    opacity: 0;
+    background-color: #131313;
+    width: 7vw;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown.active > .userIconButton + .dropdownMenu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.toSettings{
+    color: #FFF;
+    padding-top: 1vh;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.toSettings:hover{
+    color: #004021;
+    transition: 0.5s;
+}
+.logOutBtn{
+    color: #FFF; 
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: FigtreeRegular;
+    font-weight: 600;
+    font-size: 1.5vh;
+    transition: 0.3s;
+}
+.logOutBtn:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
+}
+.hpUserIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+}
+#userIcon{
+    margin-bottom: 2vh;
+    width: 50%;
+}
 .listingsMainSection{
     height: 82vh;
     max-width: 100vw;
@@ -90,7 +163,49 @@ body{
     padding-top: 1vh;
     display: flex;
     flex-direction: column;
-
+}
+.infoAndBio{
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+}
+.hotelBioDiv{
+    width: 40%;
+    height: 100%;
+}
+#hotelBio{
+    overflow-y: scroll;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    padding-left: 0.5vw;
+    padding-top: 1vh; 
+    font-family: FigtreeRegular;
+    resize: horizontal;
+    height: 22vh;
+    width: 18vw;
+    transition: 0.6s;
+}
+#hotelBio:hover{
+    transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#hotelBio::placeholder{
+    font-family: FigtreeMedium;
+    color: #131313;
+}
+#hotelBio:focus::placeholder{
+    color: transparent;
+}
+#hotelBio:focus{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#hotelBio::-webkit-scrollbar{
+    display: none;
+}
+.hotelBioLabel{
+    font-family: FigtreeMedium;
+    color: #196A43;
 }
 .listingFormTopLeft h3{
     font-size: 2.5vh;
@@ -118,6 +233,9 @@ body{
 }
 .hotelDetailInputs:hover{
     transition: 0.8s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.hotelDetailInputs:focus{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .hotelDetailInputs::placeholder{
@@ -303,11 +421,20 @@ input::file-selector-button{
     }
     .hotelDetailInputs{
         height: 4.2vh;
-        width: 17vw;
+        width: 12vw;
         font-size: 0.7em;
     }
     .hotelDetailInputsLabels{
         font-size: 0.8em;
+    }
+    .infoAndBio{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    #hotelBio{
+        height: 20vh;
+        width: 18vw;
     }
 }
 @media (max-width: 1000px){
@@ -317,11 +444,20 @@ input::file-selector-button{
     }
     .hotelDetailInputs{
         height: 4.2vh;
-        width: 17vw;
+        width: 12vw;
         font-size: 0.7em;
     }
     .hotelDetailInputsLabels{
         font-size: 0.8em;
+    }
+    .infoAndBio{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    #hotelBio{
+        height: 20vh;
+        width: 18vw;
     }
 }
 @media (max-width: 800px){
@@ -336,6 +472,27 @@ input::file-selector-button{
         margin-right: 5vw;
     }
     .listpropertyHeaderRight a{
+        font-size: 0.7em;
+    }
+    .hotelDetailInputs{
+        height: 4.2vh;
+        width: 10vw;
+        font-size: 0.7em;
+    }
+    .hotelDetailInputsLabels{
+        font-size: 0.7em;
+    }
+    .infoAndBio{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    #hotelBio{
+        height: 20vh;
+        width: 18vw;
+        font-size: 0.8em;
+    }
+    .hotelBioLabel{
         font-size: 0.7em;
     }
 }
@@ -355,16 +512,19 @@ input::file-selector-button{
     }
 }
 @media (max-width: 500px){
+    .listpropertyHeaderLeft {
+        font-size: 1.3em;
+    }
     .hotelDetailInputs{
-        height: 4.2vh;
-        width: 17vw;
+        height: 4vh;
+        width: 12vw;
         font-size: 0.5em;
     }
     .hotelDetailInputsLabels{
         font-size: 0.7em;
     }
     .listpropertyHeaderLeft {
-        margin-left: 14vw;
+        margin-left: 15vw;
     }
     .listpropertyHeaderRight{
         margin-right: 5vw;
@@ -385,5 +545,18 @@ input::file-selector-button{
     }
     .hotelierDetails h3{
         font-size: 1em; 
+    }
+    .infoAndBio{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    #hotelBio{
+        height: 20vh;
+        width: 15vw;
+        font-size: 0.8em;
+    }
+    .hotelBioLabel{
+        font-size: 0.7em;
     }
 }

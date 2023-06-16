@@ -8,6 +8,7 @@ const hotelLocation = document.querySelector("#hotelLocation");
 const contactName = document.querySelector("#contactName");
 const contactEmail = document.querySelector("#contactEmail");
 const contactNumber = document.querySelector("#contactNumber");
+const hotelBio = document.querySelector("#hotelBio");
 const createListingBtn = document.querySelector("#createListingBtn");
 const img = document.querySelector("#displayHotelImage");
 const placeholderImg =
@@ -40,6 +41,7 @@ createListingBtn.addEventListener("click", () => {
   let FormContactName = contactName.value;
   let FormContactEmail = contactEmail.value;
   let FormContactNumber = contactNumber.value;
+  let FormHotelBio = hotelBio.value;
   let FormUploadedImage = document.querySelector("#displayHotelImage").src;
 
   if (
@@ -52,6 +54,7 @@ createListingBtn.addEventListener("click", () => {
     FormContactName &&
     FormContactEmail &&
     FormContactNumber &&
+    FormHotelBio &&
     FormUploadedImage 
   ) {
     createListingBtn.disabled = true;
@@ -65,6 +68,7 @@ createListingBtn.addEventListener("click", () => {
       FormContactName,
       FormContactEmail,
       FormContactNumber,
+      FormHotelBio,
       FormUploadedImage,
       createdAt: new Date().toString(),
       uploadedBy: sessionStorage.getItem("userToken"),
@@ -82,13 +86,3 @@ createListingBtn.addEventListener("click", () => {
   }
 });
 
-//     let uploadedImageUrl = "";
-
-//   uploadImage.addEventListener("change", () => {
-//     const reader = new FileReader();
-//     reader.addEventListener("load", () => {
-//         uploadedImageUrl = reader.result;
-//         document.querySelector(".choosePhotos").style.backgroundImage = `url(${uploadedImageUrl})`;
-//     })
-//     reader.readAsDataURL(this.files[0]);
-//   })

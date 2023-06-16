@@ -18,8 +18,16 @@
             <a href="./homepage.html" class="cursorHover">Home</a>
             <a href="./aboutus.html" class="cursorHover">About us</a>
             <a href="./settings.html" class="cursorHover">Settings</a>
-            <div class="listpropertyUserIcon appear">
-                <i class="fa-solid fa-circle-user fa-2xl cursorHover" style="color: #FFF;"></i>
+            <div class="dropdown" id="dataDropdown">
+                <button class="userIconButton" id="dataDropdownButton"><i class="hpUserIcon appear fa-solid fa-circle-user fa-2xl cursorHover" id="userIcon" style="color: #FFF;"></i></button>
+                <div class="dropdownMenu">
+                    <div class="dropdownToSettings flexCenter cursorHover">
+                        <a href="./settings.html" ><button class="toSettings cursorHover flexCenter">Settings</button></a>
+                    </div>
+                    <div class="dropdownToLogOut flexCenter cursorHover">
+                        <p><button class="logOutBtn cursorHover" onclick="logOut()">Log out</button></p>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -31,18 +39,24 @@
             <div class="listingFormTop">
                 <div class="listingFormTopLeft">
                     <h3>Basic information:</h3>
-                    <div class="basicInfoInputs">
-                        <div>
-                            <label for="hotelName" class="hotelDetailInputsLabels">Hotel name:</label>
-                            <input id="hotelName" class="hotelDetailInputs cursorHover" type="text" placeholder="Name: ">
+                    <div class="infoAndBio">
+                        <div class="basicInfoInputs">
+                            <div>
+                                <label for="hotelName" class="hotelDetailInputsLabels">Hotel name:</label>
+                                <input id="hotelName" class="hotelDetailInputs cursorHover" type="text" placeholder="Name: ">
+                            </div>
+                            <div>
+                                <label for="hotelLocation" class="hotelDetailInputsLabels">Located in:</label>
+                                <input id="hotelLocation" class="hotelDetailInputs cursorHover" type="text" placeholder="City name:">
+                            </div>
+                            <div>
+                                <label for="hotelAddress" class="hotelDetailInputsLabels">Address:</label>
+                                <input id="hotelAddress" class="hotelDetailInputs cursorHover" type="text" placeholder="Enter hotel address:">
+                            </div>
                         </div>
-                        <div>
-                            <label for="hotelLocation" class="hotelDetailInputsLabels">Located in:</label>
-                            <input id="hotelLocation" class="hotelDetailInputs cursorHover" type="text" placeholder="City name:">
-                        </div>
-                        <div>
-                            <label for="hotelAddress" class="hotelDetailInputsLabels">Address:</label>
-                            <input id="hotelAddress" class="hotelDetailInputs cursorHover" type="text" placeholder="Enter hotel address:">
+                        <div class="hotelBioDiv">
+                            <label for="hotelBio" class="hotelBioLabel">Bio:</label>
+                            <textarea name="Bio:" id="hotelBio" rows="30" placeholder="Briefly describe your Hotel:"></textarea>
                         </div>
                     </div>
                 </div>

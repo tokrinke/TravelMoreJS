@@ -41,57 +41,59 @@ createAccBtn.addEventListener("click", () => {
   let repeatedPasswordVal = repeatPassword.value;
 
   if (nameVal && surnameVal && emailVal && passwordVal && repeatedPasswordVal) {
-    const currentUser = users.find((user) => user.data.email === emailVal);
-    if (currentUser) {
-      displayAlert(
-        "Email taken",
-        "Unfortunately the email you entered is taken, please choose another one",
-        "error"
-      );
-    } else {
-      createAccBtn.disabled = true;
-      addElementInFirebase("user", {
-        name: nameVal,
-        surname: surnameVal,
-        email: emailVal,
-        password: passwordVal,
-        createdAt: new Date().toString(),
-      });
-      displayAlert("User successfully registered", `${emailVal}`, "success");
-      const updatedFirebaseDB = getArrayFromFirebase("user");
-      setTimeout(() => {
-        let activeUserData;
-        updatedFirebaseDB.forEach((user) => {
-          if (user.data.email === emailVal) {
-            activeUserData = user;
-            return;
-          }
-        });
-        sessionStorage.setItem("userToken", activeUserData.userid);
-        sessionStorage.setItem(
-          "activeUserInfo",
-          JSON.stringify({
-            name: activeUserData.data.name,
-            surname: activeUserData.data.surname
-          })
+    if(emailVal.includes("@gmail.com") || emailVal.includes("@yahoo.com") || emailVal.includes("@travelmore.com") || emailVal.includes("@mail.ru")){
+          const currentUser = users.find((user) => user.data.email === emailVal);
+        if (currentUser) {
+          displayAlert(
+            "Email taken",
+            "Unfortunately the email you entered is taken, please choose another one",
+            "error"
+          );
+        } else {
+          createAccBtn.disabled = true;
+          addElementInFirebase("user", {
+            name: nameVal,
+            surname: surnameVal,
+            email: emailVal,
+            password: passwordVal,
+            createdAt: new Date().toString(),
+          });
+          displayAlert("User successfully registered", `${emailVal}`, "success");
+          const updatedFirebaseDB = getArrayFromFirebase("user");
+          setTimeout(() => {
+            let activeUserData;
+            updatedFirebaseDB.forEach((user) => {
+              if (user.data.email === emailVal) {
+                activeUserData = user;
+                return;
+              }
+            });
+            sessionStorage.setItem("userToken", activeUserData.userid);
+            sessionStorage.setItem(
+              "activeUserInfo",
+              JSON.stringify({
+                name: activeUserData.data.name,
+                surname: activeUserData.data.surname
+              })
+            );
+            location.href = "./homepage.html";
+          }, 2000);
+        }
+      } else {
+        displayAlert(
+          "Error",
+          "Make sure email you provided exists and ensure all required fields are filled in.",
+          "error"
         );
-        location.href = "./homepage.html";
-      }, 2000);
+      }
+      if (repeatedPasswordVal !== passwordVal) {
+        displayAlert(
+          "Error",
+          "Please make sure that repeated password matches the original",
+          "error"
+        );
+      }
     }
-  } else {
-    displayAlert(
-      "Error",
-      "Please provide all of the required information",
-      "error"
-    );
-  }
-  if (repeatedPasswordVal !== passwordVal) {
-    displayAlert(
-      "Error",
-      "Please make sure that repeated password matches the original",
-      "error"
-    );
-  }
 });
 
 // Login logic
@@ -111,6 +113,7 @@ logInBtn.addEventListener("click", () => {
         surname: activeUserData.data.surname,
       })
     );
+    displayAlert("Logged in succesfully", `${emailVal}`, "success");
     setTimeout(() => {
       location.href = "./homepage.html";
     }, 2000);
@@ -127,19 +130,3 @@ function clearInputs() {
   inputPassword.value = "";
   repeatPassword.value = "";
 }
-
-// Image carousel
-
-// let carouselIndex = 0;
-// showCarouselImgs();
-
-// function showCarouselImgs(){
-//   let carousel = document.querySelectorAll(".carouselImgs");
-//   for (let i = 0; i < carousel.length; i++){
-//     carousel[i].style.display = "none";
-//   }
-//   carouselIndex++
-//   if (carouselIndex > carousel.length) {carouselIndex = 1}
-//   carousel[carouselIndex-1].style.display = "block";
-//   setTimeout(showCarouselImgs, 4000);
-// }

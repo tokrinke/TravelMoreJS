@@ -63,9 +63,16 @@ body{
 .aboutUsHeaderRight a{
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
+}
+.aboutUsHeaderRight a:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
 }
 .dropdown{
     position: relative;
+    display: none;
 }
 .userIconButton{
     text-decoration: none;
@@ -76,10 +83,11 @@ body{
 .dropdownMenu{
     position: absolute;
     z-index: 1;
-    left: calc(100% - 2vw);
+    left: calc(100% - 4vw);
     top: calc(100% + 1vh);
     opacity: 0;
     background-color: #131313;
+    width: 7vw;
     transform: translateY(-10px);
     pointer-events: none;
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
@@ -99,8 +107,12 @@ body{
     outline: none;
     border: none;
     background-color: transparent;
+    transition: 0.3s;
 }
-
+.toSettings:hover{
+    color: #004021;
+    transition: 0.5s;
+}
 .logOutBtn{
     color: #FFF; 
     text-decoration: none;
@@ -110,10 +122,23 @@ body{
     font-family: FigtreeRegular;
     font-weight: 600;
     font-size: 1.5vh;
+    transition: 0.3s;
 }
-
-
-
+.logOutBtn:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
+}
+.hpUserIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+}
+#userIcon{
+    margin-bottom: 2vh;
+    width: 50%;
+}
 .aboutUsInfo{
     width: 100vw;
     min-height: 50vh;
@@ -333,9 +358,6 @@ body{
     padding-left: 1vw;
     padding-right: 1vw;
 }
-.closeChat{
-
-}
 .chatBoxMid{
     height: 78%;
     width: 100%;
@@ -429,5 +451,52 @@ body{
     }
     .locInfo  p{
         font-size: 0.9em;
+    }
+}
+@media (max-width: 450px){
+    .aboutUsHeaderLeft {
+        padding-left: 1.8em;
+    }
+    .footerEmail h2{
+        font-size: 0.7em;
+    }
+    .ourSocials h2{
+        font-size: 0.7em;
+    }
+    .footerNumber h2{
+        font-size: 0.7em;
+    }
+    .addressP {
+        width: 30vw;
+        height: 5vh;
+        margin-bottom: 1vh;
+    }
+    .addressP a{
+        font-size: 0.55em;
+        padding-left: 5px;
+    }
+    .chat{
+        width: 25vw;
+    }
+    .chatInfo{
+        display: none;
+    }
+    .aboutUsInfoContent p{
+        font-size: 0.8em;
+    }
+    .contactLeft p{
+        font-size: 0.8em;
+    }
+    .locInfo  p{
+        font-size: 0.6em;
+    }
+    .footerNumber{
+        font-size: 0.8em;
+    }
+    .footerSocials{
+
+    }
+    .footerEmail{
+
     }
 }

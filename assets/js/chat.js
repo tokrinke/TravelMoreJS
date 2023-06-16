@@ -94,7 +94,7 @@ function loadMsg() {
             </div>
           </div>
         `;
-    } else if (response.authorID === "7d2cb77a-2323-4774-8980-1d1ebbe11f70") {
+    } else if (response.authorID === "022ef8a2-cc8b-438f-8093-5d92cff2f2bf") {
       displayMsgs.innerHTML += `
           <div class="msgBlock" id="${response.index}">
             <div class="aboveMsg">
@@ -110,7 +110,7 @@ function loadMsg() {
         `;
     }
   });
-  if (userToken === "7d2cb77a-2323-4774-8980-1d1ebbe11f70") {
+  if (userToken === "022ef8a2-cc8b-438f-8093-5d92cff2f2bf") {
     displayMsgs.innerHTML = "";
     const sortMsgs = msgArr.sort((a, b) => a.index - b.index);
     sortMsgs.forEach((response) => {

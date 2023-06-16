@@ -44,6 +44,12 @@ body{
 .paymentHeaderRight a{
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
+}
+.paymentHeaderRight a:hover{
+    cursor: pointer;
+    color: #004021;
+    transition: 0.5s;
 }
 .paymentSection{
     height: 87vh;
@@ -226,6 +232,10 @@ footer p {
         height: 4.2vh;
         width: 8vw;
     }
+    .paymentHeaderLeft {
+        font-size: 3vh;
+        padding-left: 3vw;
+    }
 }
 @media (max-width: 800px){
     footer p {
@@ -243,6 +253,13 @@ footer p {
     .payWithTBC{
         width: 12vw;
     }   
+    .paymentHeaderLeft {
+        font-size: 3vh;
+        padding-left: 6vw;
+    }
+    footer p{
+        padding-left: 2vw;
+    }
 }
 @media (max-width: 500px){
     .paymentInputs{
@@ -259,4 +276,11 @@ footer p {
     .payWithTBC{
         width: 15vw;
     }   
+    .paymentHeaderLeft {
+        font-size: 3vh;
+        padding-left: 10vw;
+    }
+    footer p{
+        padding-left: 2vw;
+    }
 }

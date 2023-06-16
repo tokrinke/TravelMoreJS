@@ -1,3 +1,4 @@
+const admin = "022ef8a2-cc8b-438f-8093-5d92cff2f2bf";
 const path = location.href.split("/").pop().split(".")[0];
 console.log(path);
 
